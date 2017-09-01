@@ -44,29 +44,25 @@ section::-webkit-scrollbar-thumb
 {
 	background-color: #151518;
 }
-.floatLayout .slideWrapper *{
+.floatLayout *{
     float: left;
 }
-.floatLayout .slideWrapper span,.floatLayout .slideWrapper p b,.floatLayout .slideWrapper p i{
+.floatLayout  span,.floatLayout  p b,.floatLayout p i floatLayout p{
     float: none;
 }
-.floatLayout .slideWrapper p span{
+.floatLayout  p span{
     float: none;
 }
 aside{
-    position: absolute;
-    left: 0;    
     display: block;
-    max-width: 45%;
+    width: 100%;
     height: auto;
-    min-height: 90%;
     padding: 2%;
     border: 15px solid transparent;
     border-image: url(../img/borderBlue.svg) 70 round;
     background-color: #009ADA;
     background-clip: padding-box;
     color: #DDDB1C;
-    font-family: 'aileronheavy';
     margin-right: 2%;
 }
 aside div{
@@ -75,7 +71,7 @@ aside div{
 }
 aside ul li{
     color: #fff;
-    list-style-image: url(../img/ul.svg)
+    list-style-image: url(../img/ul.svg);
 }
 h1,
 h2,
@@ -94,9 +90,11 @@ aside h2,
 aside h3{
     position: relative;
     left: -45px;
-    padding-left: 45px;
+    width: 100%;
     padding-top: 5px;
+    padding-right: 20px;
     padding-bottom: 5px;
+    padding-left: 45px;
     background-color: #B9007C;
     color: #fff;
     -webkit-border-radius: 0px 10px 10px 0px;
@@ -233,8 +231,52 @@ p .boldItalic, li .boldItalic{
     height: auto;
     min-height: 15%;
 }
+.active #header>div>div .navButton:first-child{
+    border-left: none;
+}
+.active #header>div>div .navButton{
+    display: block;
+    float: left;
+    width: 16%;
+    min-width: 140px;
+    padding: 1% 2%;
+    border-left: 1px solid #dfdfdf;
+    border-bottom: 5px solid #fff;
+    font-family: 'header';
+    text-align: center;
+    cursor: pointer;
+}
+.active #header>div>div .navButton:hover{
+    border-bottom: 5px solid #B9007C;
+}
 
-
+/*#agenda*/
+#agenda{
+    display: table;
+}
+#agenda>div{
+    display: table-row;
+    width: 900px;
+}
+#agenda>div>div{
+    display: table-cell;
+}
+#agenda>div>aside{
+    vertical-align: top;
+}
+#agenda>div>div:first-child{
+    vertical-align:top;
+    width: 40%;
+    height: auto;
+}
+#agenda>div>div:last-child{
+    vertical-align:super;
+    height: auto;
+    
+}
+#agenda>div>div:last-child img{
+    margin-left: 5px;
+}
 
 /*rieles*/
 .rail{
@@ -269,17 +311,28 @@ p .boldItalic, li .boldItalic{
     background-color: #dfdfdf;
 }
 
-
+/*#a25M{
+    background-image: url(../img/agenda_25M-25.svg);
+    
+}
+#a26M{
+    background-image: url(../img/agenda_26M-26.svg);
+}
+#a26V{
+    background-image: url(../img/agenda_26V-27.svg);
+}*/
 
 /*agenda*/
 .agenda{
-    position: relative;
-    width: 60%;
-    height: auto;
+    width: 100%;
+    height: 120%;
     min-height: 100%;
     left: 50%;
     overflow: hidden;
     float: left;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: top right;
 }
 .agenda .rail{
     left: 0;
@@ -526,3 +579,17 @@ section.next{
     cursor: pointer;
     pointer-events: all;
 }
+
+
+ul.sub{
+    list-style-image: none; 
+    list-style-type: none;
+    
+}
+ul.sub li{
+    list-style-image: none; 
+    list-style-type:disc;
+}
+
+
+

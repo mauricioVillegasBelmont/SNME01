@@ -22,9 +22,9 @@
                         <div class="navButton" onclick="setCurrent(slides,1)">Presentación</div>
                         <div class="navButton" onclick="setCurrent(slides,2)">Objetivo General</div>
                         <div class="navButton" onclick="setCurrent(slides,3)">Agenda</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Poenetes</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Fundación</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Contacto</div>
+                        <div class="navButton" onclick="setCurrent(slides,6)">Poenetes</div>
+                        <div class="navButton" onclick="setCurrent(slides,6)">Fundación</div>
+                        <div class="navButton" onclick="setCurrent(slides,6)">Contacto</div>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                     <img style="max-height:90%;" src="resources/img/mainlogo_main.svg">
                     
                 </section>
-                <section id="presentacion" >
-                    <div class="slideWrapper floatLayout">
+                <section id="presentacion" class="floatLayout">
+                    <div class="slideWrapper">
                         <div class="capitalLeter">
                             <img src="resources/img/d.svg">
                         </div>
@@ -49,102 +49,83 @@
                         </div>
                     </div>
                 </section>
-                <section id="objetivo" class="">
-                    <div class="slideWrapper floatLayout">
+                <section id="objetivo" class="floatLayout">
+                    <div class="slideWrapper">
                         <div class="capitalLeter">
                             <img src="resources/img/s.svg">
                         </div>
                         <div class="bodyText">
                             <p>in duda, una de las etapas más esperadas de la Reforma Educativa en curso es la relativa al nuevo modelo educativo que se impulsará para afrontar los grandes temas de la agenda educativa nacional. La Secretaría de Educación Pública de nuestro país ha concluido una serie de etapas clave para la definición de los cinco ejes que conforman al nuevo modelo educativo: <i>Planteamiento curricular; La Escuela al Centro del Sistema Educativo; Formación y desarrollo profesional docente; Inclusión y equidad; y La Gobernanza del Sistema Educativo.</i></p>
                             <p>Con la intención de coadyuvar con la SEP en el análisis de diversos temas relativos a lograr la mejor implementación del nuevo modelo educativo, <b>Fundación Santillana y la Organización de Estados Iberoamericanos (OEI) han convocado a organismos de reconocido prestigio internacional para incorporarse como coorganizadores de este simposio y enriquecer con su participación y experiencia las reflexiones que se desarrollen durante el mismo.</b> Con la intención de poner foco en el análisis y evitar la dispersión, hemos seleccionado tres grandes temas que guiarán nuestros trabajos durante las dos jornadas: Reforma curricular, Liderazgo y Gestión escolar. Los tres temas hacen clara referencia a aspectos medulares del modelo educativo recientemente dado a conocer por la SEP y, con toda seguridad, nos permitirán seguir avanzando para consolidar la adecuada implementación del modelo educativo durante el ciclo escolar 2018-2019.</p>
+                            
+                            
+                            
+                            
+                            
                         </div>
                         <div class="bullet">
                             <img src="resources/img/bullet02.svg">
                         </div>
                     </div>
                 </section>
-                <section id="" class="">
-                    <div id="agenda" class="slideWrapper">
-                        <div>
-                            <div>
-                                <aside style="">
-                                    <h3>DÍA UNO <span>Sesión vespertina</span></h3>
-                                    <p>Mensaje inaugural de Aurelio Nuño Mayer, Secretario de Educación Pública de México</p>
-                                    <p> Visión de la Reforma Educativa: Logros por cimentar y retos para el futuro cercano</p>
-                                    <ul>
-                                        <li>Con la participación de; <ul class="sub">
-                                            <li>Gabriela Ramos, Directora del Gabinete del Secretario General de la OCDE</li>
-                                            <li>Nuria Sanz Gallego, Directora y Representante de UNESCO en México.</li>
-                                            <li>Arturo Velázquez Jiménez, Director de la OEI en México.</li>
-                                        </ul>
-                                        </li>
-                                    </ul>
-                                    <p>Documento del simposio</p>
-                                    <ul>
-                                        <li>Presentación por Lorenzo Gómez-Morin Fuentes, profesor-investigador de FLACSO.</li>
-                                    </ul>
-                                    <p>Liderazgo escolar</p>
-                                    <ul>
-                                        <li>Conferencia magistral impartida por Ricardo Cuenca Pareja, Director del Instituto de Estudios Peruanos.</li>
-                                    </ul>
-                                    <p>Un nuevo modelo educativo para el nuevo país que queremos seguir construyendo</p>
-                                    <ul>
-                                        <li>Conferencia magistral impartida por Javier Treviño Cantú, Subsecretario de Educación Básica, SEP México.</li>
-                                    </ul>
-                                </aside>
-                            </div>
-                            <div id="a25M" class="agenda">
-                                <img src="resources/img/agenda_25M.svg">
-                            </div> 
+                <section id="dia1">
+                    <div class="slideWrapper">
+                        <aside style="">
+                            <h3>DÍA UNO <span>Sesión vespertina</span></h3>
+                            <p>Mensaje inaugural de Aurelio Nuño Mayer, Secretario de Educación Pública de México
+                                Visión de la Reforma Educativa: Logros por cimentar y retos para el futuro cercano</p>
+                            <ul>
+                                <li>Con la participación de Gabriela Ramos, Directora del Gabinete del Secretario General de la OCDE, Cecilia Barbieri, Directora General de UNESCO – OREALC y Arturo Velázquez Jiménez, Director de la OEI en México.</li>
+                            </ul>
+                            <p>Documento del simposio</p>
+                            <ul>
+                                <li>Presentación por Lorenzo Gómez-Morin Fuentes, profesor-investigador de FLACSO.</li>
+                            </ul>
+                            <p>Liderazgo escolar</p>
+                            <ul>
+                                <li>Conferencia magistral impartida por Ricardo Cuenca Pareja, Director del Instituto de Estudios Peruanos.</li>
+                            </ul>
+                            <p>Un nuevo modelo educativo para el nuevo país que queremos seguir construyendo</p>
+                            <ul>
+                                <li>Conferencia magistral impartida por Javier Treviño Cantú, Subsecretario de Educación Básica, SEP México.</li>
+                            </ul>
+                        </aside>
+                        <div class="agenda">
+                            <img src="resources/img/agenda_25M.svg">
+                        </div> 
+                    </div>
+                </section>
+                <section id="dia2_M">
+                    <div class="slideWrapper">
+                        <aside>
+                            <h3>DÍA DOS <span>Sesión matutina</span></h3>
+                            <P>Gestión escolar</P>
+                            <ul>
+                                <li>Conferencia magistral impartida por Serafín Antúnez Marcos, catedrático de la Facultad de Pedagogía de la Universidad de Barcelona (UB).</li>
+                                <li>Mesa de diálogo: visión Iberoamericana, con las participaciones de Marcial Marín Hellín, Secretario de Estado de Educación del Ministerio de Educación, Cultura y Deporte de España, Valentina Quiroga Canahuate, Subsecretaria de Educación de Chile y Cecilia Barbieri Directora General de UNESCO – OREAL. Moderador: Carlos Mancera Corcuera, Director del Consejo Nacional de Participación Social en Educación.</li>
+                            </ul>
+                        </aside>
+                        <div class="agenda">
+                            <img src="resources/img/agenda_26M.svg">
                         </div>
-                        <div >
-                            <div>
-                                <aside>
-                                    <h3>DÍA DOS <span>Sesión matutina</span></h3>
-                                    <P>Gestión escolar</P>
-                                    <ul class="">
-                                        <li>Conferencia magistral impartida por Serafín Antúnez Marcos, catedrático de la Facultad de Pedagogía de la Universidad de Barcelona (UB).</li>
-                                        <li>Mesa de diálogo: visión Iberoamericana, con las participaciones de Marcial Marín Hellín, Secretario de Estado de Educación del Ministerio de Educación, Cultura y Deporte de España, Valentina Quiroga Canahuate, Subsecretaria de Educación de Chile y Nuria Sanz Gallego, UNESCO México.<ul>
-                                            <li><span class="greenFont">Moderador:</span> Carlos Mancera Corcuera, Director del Consejo Nacional de Participación Social en Educación.</li>
-                                        </ul></li>
-                                        
-                                    </ul>
-                                </aside>
-                            </div>
-                            <div id="a26M" class="agenda">
-                                <img src="resources/img/agenda_26M.svg">
-                            </div>
-                        </div>
-                        <div >
-                            <div>
-                                <aside>
-                                    <h3>DÍA DOS <span>Sesión vespertina</span></h3>
-                                    <P>Reforma curricular</P>
-                                    <ul>
-                                        <li>Conferencia magistral impartida por Carlos Magro Mazo, Vicepresidente de la Asociación Educación Abierta y Director Académico del Instituto Europeo de Diseño (IED).</li>
-                                        <li>Mesa de diálogo: voz, visión y retos de implementación, con las participaciones de Celia Díaz Argüero (Español), Silvia Conde Flores (FCE), Teresa Rojano Ceballos (Matemáticas), Fernando Flores Camacho (Ciencias naturales y tecnología), Laura Lima Muñiz (Historia), María del Carmen Campillo (Educación socioemocional) y Juan Manuel Martínez García (Autonomía curricular). 
-                                        <ul>
-                                            <li><span class="greenFont">Moderadora:</span> Elisa Bonilla Rius, Directora General de Desarrollo Curricular de la SEB - SEP.</li>
-                                        </ul>
-                                        </li>
-                                    </ul>
-                                    <P>Gobernanza del sistema educativo.</P>
-                                    <ul>
-                                            <li>Mesa de diálogo: Tiempo de coincidencias, Agustina Blanco, Directora de la Red de Escuelas de Aprendizaje, Argentina; José Enrique Villa Rivera, Secretario de Educación Pública y Cultura del Estado de Sinaloa; Patricia Vázquez del Mercado, Secretaria de Educación de Puebla, y Eduardo Backhoff, Consejero Presidente del INEE.
-                                               <ul>
-                                                    <li><span class="greenFont">Moderador:</span> Sergio Cárdenas, Director General del CREFAL.</li>
-                                                </ul>
-                                        </li>
-                                    </ul>
-                                    <P>Trayecto recorrido y prospectiva de la Reforma Educativa</P>
-                                    <ul>
-                                        <li>Conferencia magistral impartida por Otto Granados Roldán, Subsecretario de Planeación, SEP México.</li>
-                                    </ul>
-                                </aside>
-                            </div>
-                            <div id="a26V" class="agenda">
-                                <img src="resources/img/agenda_26V.svg">
-                            </div>
+                    </div>
+                </section>
+                <section id="dia2_V">
+                    <div class="slideWrapper">
+                        <aside>
+                            <h3>DÍA DOS <span>Sesión vespertina</span></h3>
+                            <P>Reforma curricular</P>
+                            <ul>
+                                <li>Conferencia magistral impartida por Carlos Magro Mazo, Vicepresidente de la Asociación Educación Abierta y Director Académico del Instituto Europeo de Diseño (IED).</li>
+                                <li>Mesa de diálogo: voz, visión y retos de implementación, con las participaciones de Celia Díaz Argüero (Español), Silvia Conde Flores (FCE), Teresa Rojano Ceballos (Matemáticas), Fernando Flores Camacho (Ciencias naturales y tecnología), Laura Lima Muñiz (Historia), María del Carmen Campillo (Educación socioemocional) y Juan Manuel Martínez García (Autonomía curricular). Moderadora: Elisa Bonilla Rius, Directora General de Desarrollo Curricular de la SEB.</li>
+                            </ul>
+                            <P>Trayecto recorrido y prospectiva de la Reforma Educativa</P>
+                            <ul>
+                                <li>Conferencia magistral impartida por Otto Granados Roldán, Subsecretario de Planeación, SEP México.</li>
+                            </ul>
+                        </aside>
+                        <div class="agenda">
+                            <img src="resources/img/agenda_26V.svg">
                         </div>
                     </div>
                 </section>
@@ -212,7 +193,7 @@
                                         <img src="resources/img/ponente07.png">
                                     </div>
                                     <div>
-                                        <h3>Carlos Mancera Corcuera</h3>
+                                        <h3>Carlos Mancera Corcuera </h3>
                                         <p><span>Director del Consejo Nacional de Participación Social en Educación (CONAPASE).</span> Desde 1988, ocupó diversos cargos en dependencias de la administración pública federal, en las secretarías de Programación y Presupuesto y Educación Pública; director adjunto de Política Científica y Tecnológica del Conacyt. Fue subsecretario de Planeación y Coordinación de la SEP. Consultor educativo.</p>
                                     </div>
                                 </div>
@@ -230,8 +211,8 @@
                                         <img src="resources/img/ponente09.png">
                                     </div>
                                     <div>
-                                        <h3>Nuria Sanz Gallego </h3>
-                                        <p><span>Directora y Representante de la UNESCO en México.</span> Licenciada en Geografía e Historia de la Universidad Complutense de Madrid y doctora en Prehistoria por la Universidad de la Sapienza en Italia. Coordinó el Máster de Gestión Cultural: Patrimonio, Turismo y Ocio y Naturaleza en la Universidad Complutense, por lo que a finales de los años 90 se le invitó a formar parte del Departamento de Patrimonio Cultural del Consejo de Europa. Trabaja en la UNESCO desde el 2001.</p>
+                                        <h3>Cecilia Barbieri</h3>
+                                        <p><span>Directora General de UNESCO – OREALC.</span> Especialista de educación en la UNESCO desde 1999, principalmente en África y Asia. Antes de incorporarse a la UNESCO trabajó en el campo de la formación técnica y profesional y desarrollo de capacidad institucional, así como en el campo de educación para la paz, los derechos humanos y educación intercultural con una ONG internacional.</p>
                                     </div>
                                 </div>
                                 <div>
@@ -339,11 +320,19 @@
                                         <img src="resources/img/ponente21.png">
                                     </div>
                                     <div>
-                                        <h3>Emiliana Rodríguez Morales</h3>
-                                        <p><span>Especialista en educación socioemocional.</span> Consultora de organizaciones como la Secretaría de Educación Pública, el Programa de las Naciones Unidas para el  Desarrollo, Mind and Life Institute y Research Schools International. Su trabajo se enfoca en el desarrollo curricular, formación de instructores y en la vinculación entre la investigación y la práctica pedagógica de la educación socioemocional.</p>
+                                        <h3>Laura Lima Muñiz</h3>
+                                        <p><span>Coordinadora de los Programas de estudio para las asignaturas de Formación Cívica y Ética, Geografía e Historia.</span> Profesor de la UPN. Especialista en enseñanza de la historia. Realizó estudios de doctorado en Historia en El Colegio de México y cursos sobre enseñanza de las Ciencias Sociales en Flacso (Argentina). Fue directora de Ciencias Sociales en la DGDC de la SEP.</p>
                                     </div>
                                 </div>
-                                
+                                <div>
+                                    <div>
+                                        <img src="resources/img/ponente22.png">
+                                    </div>
+                                    <div>
+                                        <h3>María del Carmen Campillo Pedrón</h3>
+                                        <p><span>Coordinadora de los Programas de estudio del área de Educación Socioemocional.</span> Asesora de la DGDC en la SEB. Ha participado en múltiples proyectos educativos como consultora. Autora del libro Cómo ser adolescente y ser feliz en el intento.</p>
+                                    </div>
+                                </div>
                                 <div>
                                     <div>
                                         <img src="resources/img/ponente23.png">
@@ -353,57 +342,11 @@
                                         <p><span>Coordinador de los Programas de estudio del componente de Autonomía curricular.</span> Coordinador de los Programas de estudio de inglés y Director de Planeación y Apoyo técnico de la de la DGDC en la SEB.</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <div>
-                                        <img src="resources/img/ponente24.png">
-                                    </div>
-                                    <div>
-                                        <h3>Sergio Cárdenas Denham</h3>
-                                        <p><span>Director General del Centro de Cooperación Regional para la Educación de Adultos en América Latina y el Caribe (CREFAL).</span> Doctor y Maestro en Educación por la Universidad de Harvard. Profesor-Investigador de la División de Administración Pública del Centro de Investigación y Docencia Económicas de 2008 a 2017. Consultor del Banco Mundial, el BID y la UNESCO.</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <img src="resources/img/ponente25.png">
-                                    </div>
-                                    <div>
-                                        <h3>Agustina Blanco</h3>
-                                        <p><span>Directora de la Red de Escuelas de Aprendizaje de la Dirección General de Cultura y Educación Bonaerense.</span>Licenciada en Administración de Empresas, Magister en Educación, Manhattanville College, EUA, y en Relaciones Internacionales por la New York University. Directora Ejecutiva de Educar 2050 de 2016 a julio de 2017. Especialista en temas de liderazgo educativo y mejora escolar.</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <img src="resources/img/ponente26.png">
-                                    </div>
-                                    <div>
-                                        <h3>Patricia Vázquez del Mercado</h3>
-                                        <p><span>Secretaria de Educación Pública del Estado de Puebla.</span> Licenciada en Pedagogía de la Universidad Panamericana y maestra en Políticas Públicas Comparadas por FLACSO. Consultora educativa y asesora pedagógica de informática educativa del ILCE. Directora General de Proyectos Especiales y Subsecretaria de Educación Media Superior del estado de Puebla.</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <img src="resources/img/ponente27.png">
-                                    </div>
-                                    <div>
-                                        <h3>Eduardo Backhoff Escudero</h3>
-                                        <p><span>Consejero Presidente del INEE.</span> Investigador y Director del Instituto de Investigación y Desarrollo Educativo, Universidad Autónoma de Baja California. Su línea de investigación fue el diseño y validación de pruebas psicológicas y educativas, así como en los mecanismos para administrarlas. Director de Pruebas y Medición y Consejero de la Junta de Gobierno del INEE.</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <img src="resources/img/ponente28.png">
-                                    </div>
-                                    <div>
-                                        <h3>José Enrique Villa Rivera</h3>
-                                        <p><span>Secretario de Educación Pública y Cultura del Estado de Sinaloa.</span> Ingeniero Químico Industrial en el Instituto Politécnico Nacional (IPN). Maestría en Ciencias en Técnicas Petroleras Opción Refinación e Ingeniería Química, en el Instituto Francés del Petróleo. Director General del IPN y del Consejo Nacional de Ciencia y Tecnología. Miembro y presidente de El Colegio de Sinaloa. Medalla al Mérito Científico del Consejo Cultural Mundial.</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="fundacion"></section>
-                
             </div>
             <div id="footer" class="whiteBg">
                 <div> 

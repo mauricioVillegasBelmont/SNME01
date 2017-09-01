@@ -8,7 +8,7 @@ var scrollInterval = function(){
     document.body.scrollTop = document.body.scrollHeight;
 };
 var stopScroll = function() { clearInterval(scrollInterval); };
-var pageTitle=['','title_presentacion.svg','title_objetivoGeneral.svg','title_agenda.svg','title_agenda.svg','title_agenda.svg','title_ponentes.svg'];
+
 
 
 
@@ -68,7 +68,7 @@ function pageIndex(){
         };
         index = getChildIndex(thisPage);
         if(index >=1){
-            document.getElementById('title').src = 'resources/img/'+pageTitle[index];
+            //document.getElementById('title').src = 'resources/img/'+pageTitle[index];
         }
         if(index == allPages.length-1){
             scrollButton.classList.add('active');
