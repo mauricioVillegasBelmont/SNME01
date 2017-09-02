@@ -4,13 +4,33 @@ var ant  = document.getElementById('ant');
 var sig  = document.getElementById('sig');
 var slideIndex = 0;
 var scrollButton = document.getElementById('scrollButton');
+var navButton = document.getElementsByClassName('navButton');
 var scrollInterval = function(){ 
     document.body.scrollTop = document.body.scrollHeight;
 };
 var stopScroll = function() { clearInterval(scrollInterval); };
 
+function currentButton(index){
+    if(index != 0){
+        for(var i=0;i<=navButton.length-1;i++){
+            if(navButton[i].classList.contains('current')){
+                navButton[i].classList.remove('current');
+            }
+        }
+        navButton[index].classList.add('current');
+    }
+}
 
-
+function validateForm() {
+    var contraseña = ["simposio2017"];
+    var x = document.getElementById("password").value;
+    var wrongPassword =  "La contraseña que ha introducido no es válida. Revise la ortografía e intente nuevamente";
+    if (x != contraseña[0]) {
+        document.getElementById("paswordInput").innerHTML = wrongPassword;
+    } else {
+        window.location.href="https://www.eventbrite.es/e/entradas-simposio-modelo-educativo-2017-37508236144";
+    }
+}
 
 
 function agendaIndex(){
@@ -79,7 +99,20 @@ function pageIndex(){
     return index;
 }
 
+/*navigation*/
+function currentButton(index){
+    if(index != 0){
+        for(var i=0;i<=navButton.length-1;i++){
+            if(navButton[i].classList.contains('current')){
+                navButton[i].classList.remove('current');
+            }
+        }
+        navButton[index].classList.add('current');
+    }
+}
+
 function setCurrent(elem,index){
+    //slideIndex = index;
     for(var i = index-1;i>=0;i--){
         if(elem[i].classList.contains('current')){
             elem[i].classList.remove('current');
@@ -100,6 +133,7 @@ function setCurrent(elem,index){
         }
         elem[i].classList.add('next');
     }
+    currentButton(index)
     pageIndex();
     agendaIndex();
 }
@@ -119,9 +153,42 @@ function next(trigger,elem,index){
 function prev(trigger,elem,index){
     
 }
-function goTo(trigger,elem,index){
+function goTo(elem,index){
+    for(var i = index-1;i>=0;i--){
+        if(elem[i].classList.contains('current')){
+            elem[i].classList.remove('current');
+        }
+        if(elem[i].classList.contains('next')){
+            elem[i].classList.remove('next');
+        }
+        elem[i].classList.add('prev');
+    }
+    elem[index].classList.remove('prev','next');
+    elem[index].classList.add('current');
+    for(var i = index+1;i <= elem.length-1;i++){
+        if(elem[i].classList.contains('current')){
+            elem[i].classList.remove('current');
+        }
+        if(elem[i].classList.contains('prev')){
+            elem[i].classList.remove('prev');
+        }
+        elem[i].classList.add('next');
+    }
     
+    if(index <= 1){
+        ant.classList.add('disabled');
+    }else if(ant.classList.contains('disabled')){
+        ant.classList.remove('disabled');
+    }
+    if(index >= slides.length-1){
+        sig.classList.add('disabled');
+    }else if(sig.classList.contains('disabled')){
+        sig.classList.remove('disabled');
+    }
+    slideIndex = index;
+    currentButton(index);
 }
+
 function horizontalNav(trigger,inc){
     var navButtons = document.getElementsByClassName('horizontalNav');
     slideIndex += inc;
@@ -136,11 +203,19 @@ function horizontalNav(trigger,inc){
         }
     }
 }
+
 function home(){
     page.classList.remove('active');
     slideIndex = 0;
     setCurrent(slides,slideIndex);
     var start = document.getElementById('start').style.display='block';
+}
+
+function fundacion(){
+    window.open(
+      'http://www.fundacionsantillana.com/'
+      , '_blank' // <- This is what makes it open in a new window.
+    );
 }
 /*------------------------------------------------------------*/
 /*-----------------scroll down button-------------------*/
@@ -155,10 +230,7 @@ function checkScroll(){
 function scrollBottom(){
     var thisPage = document.querySelector("section.current");
     thisPage.scrollTop = thisPage.scrollHeight;
-    /*thisPage.scroll({ 
-        top :  'bottom',
-        behavior: 'smooth' 
-        });*/
+
 }
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/

@@ -19,12 +19,13 @@
                         <img  id="headerLogo" onclick="home()" src="resources/img/mainlogo_header.svg" >
                     </div>
                     <div>
-                        <div class="navButton" onclick="setCurrent(slides,1)">Presentación</div>
-                        <div class="navButton" onclick="setCurrent(slides,2)">Objetivo General</div>
-                        <div class="navButton" onclick="setCurrent(slides,3)">Agenda</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Poenetes</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Fundación</div>
-                        <div class="navButton" onclick="setCurrent(slides,4)">Contacto</div>
+                        <div class="navButton" onclick="fundacion()">Fundación Santillana</div>
+                        <div class="navButton" onclick="goTo(slides,1)">Presentación</div>
+                        <div class="navButton" onclick="goTo(slides,2)">Objetivo General</div>
+                        <div class="navButton" onclick="goTo(slides,3)">Agenda</div>
+                        <div class="navButton" onclick="goTo(slides,4)">Ponetes</div>
+                        <div class="navButton" onclick="goTo(slides,5)">Registro</div>
+                        
                     </div>
                 </div>
             </div>
@@ -73,8 +74,8 @@
                                     <p> Visión de la Reforma Educativa: Logros por cimentar y retos para el futuro cercano</p>
                                     <ul>
                                         <li>Con la participación de; <ul class="sub">
-                                            <li>Gabriela Ramos, Directora del Gabinete del Secretario General de la OCDE</li>
-                                            <li>Nuria Sanz Gallego, Directora y Representante de UNESCO en México.</li>
+                                            <li>Gabriela Ramos, Directora del Gabinete del Secretario General de la OCDE.</li>
+                                            <li>Pablo Cevallos Estarellas, Director de la Oficina para América Latina del Instituto Internacional de Planeamiento de la Educación (IIPE — UNESCO).</li>
                                             <li>Arturo Velázquez Jiménez, Director de la OEI en México.</li>
                                         </ul>
                                         </li>
@@ -104,9 +105,11 @@
                                     <P>Gestión escolar</P>
                                     <ul class="">
                                         <li>Conferencia magistral impartida por Serafín Antúnez Marcos, catedrático de la Facultad de Pedagogía de la Universidad de Barcelona (UB).</li>
-                                        <li>Mesa de diálogo: visión Iberoamericana, con las participaciones de Marcial Marín Hellín, Secretario de Estado de Educación del Ministerio de Educación, Cultura y Deporte de España, Valentina Quiroga Canahuate, Subsecretaria de Educación de Chile y Nuria Sanz Gallego, UNESCO México.<ul>
-                                            <li><span class="greenFont">Moderador:</span> Carlos Mancera Corcuera, Director del Consejo Nacional de Participación Social en Educación.</li>
-                                        </ul></li>
+                                        <li>Mesa de diálogo: Visión Iberoamericana, con las participaciones de Marcial Marín Hellín, Secretario de Educación de España; Valentina Quiroga Canahuate, Subsecretaria de Educación de Chile, y Pablo Cevallos Estarellas, IIEPE — UNESCO.
+                                           <ul>
+                                                <li><span class="greenFont">Moderador:</span> Carlos Mancera Corcuera, Director del Consejo Nacional de Participación Social en Educación.</li>
+                                            </ul>
+                                        </li>
                                         
                                     </ul>
                                 </aside>
@@ -230,8 +233,8 @@
                                         <img src="resources/img/ponente09.png">
                                     </div>
                                     <div>
-                                        <h3>Nuria Sanz Gallego </h3>
-                                        <p><span>Directora y Representante de la UNESCO en México.</span> Licenciada en Geografía e Historia de la Universidad Complutense de Madrid y doctora en Prehistoria por la Universidad de la Sapienza en Italia. Coordinó el Máster de Gestión Cultural: Patrimonio, Turismo y Ocio y Naturaleza en la Universidad Complutense, por lo que a finales de los años 90 se le invitó a formar parte del Departamento de Patrimonio Cultural del Consejo de Europa. Trabaja en la UNESCO desde el 2001.</p>
+                                        <h3>Pablo Cevallos Estarellas</h3>
+                                        <p><span>Director de la Oficina para América Latina del Instituto Internacional de Planeamiento de la Educación (IIPE — UNESCO).</span> Doctor en Pedagogía con maestría en Educación y Pensamiento Crítico de la Montclair State University, de Nueva Jersey, Estados Unidos. Docente a nivel secundario y universitario en instituciones de Ecuador y Estados Unidos. Consultor internacional. Ocupó cargos en el Ministerio de Educación de Ecuador.</p>
                                     </div>
                                 </div>
                                 <div>
@@ -402,7 +405,17 @@
                         </div>
                     </div>
                 </section>
-                <section id="fundacion"></section>
+                <!--<section id="fundacion"></section>-->
+                <section id="registro">
+                    <div class="slideWrapper" style="height:100%;">
+                        <div id="passworContainer">
+                            <input id="password" type="text" placeholder="contraseña"> 
+                            <input id="button" type="button" value="Ingresar" onclick="validateForm()">
+                            <p>ingrese su contraseña para registrarse</p>
+                            <p id="paswordInput" style="color:red;"></p>
+                        </div>
+                    </div>
+                </section>
                 
             </div>
             <div id="footer" class="whiteBg">
