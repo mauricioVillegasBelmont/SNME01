@@ -25,10 +25,17 @@ function validateForm() {
     var contraseña = ["simposio2017"];
     var x = document.getElementById("password").value;
     var wrongPassword =  "La contraseña que ha introducido no es válida. Revise la ortografía e intente nuevamente";
+    var rightPassword = "Gracias";
     if (x != contraseña[0]) {
         document.getElementById("paswordInput").innerHTML = wrongPassword;
     } else {
-        window.location.href="https://www.eventbrite.es/e/entradas-simposio-modelo-educativo-2017-37508236144";
+        window.open(
+          'https://www.eventbrite.es/e/entradas-simposio-modelo-educativo-2017-37508236144'
+          , '_blank' // <- This is what makes it open in a new window.
+        );
+        document.getElementById("paswordInput").style.color="#0094A1";
+        document.getElementById("paswordInput").innerHTML = rightPassword;
+        
     }
 }
 
