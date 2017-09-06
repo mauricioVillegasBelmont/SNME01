@@ -640,6 +640,10 @@ ul.sub li{
     -moz-   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
 }
+#organizadores .slideWrapper{
+    top:15%;
+    max-height: 50%;
+}
 #organizadores .table{
     display: table;
     width: 100%;
@@ -653,11 +657,15 @@ ul.sub li{
 #organizadores .row div{
     display: table-cell;
     border-right: 1px solid #fff;
-    vertical-align: middle;
+    vertical-align: top;
     min-width: 100px;
 }
 #organizadores .row img{
     display: block;
+}
+#organizadores .row div:first-Child{
+    vertical-align: middle;
+    
 }
 #organizadores .row div:last-Child{
     border-right: 1px solid transparent;
