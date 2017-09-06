@@ -224,6 +224,36 @@ function fundacion(){
       , '_blank' // <- This is what makes it open in a new window.
     );
 }
+function oei(){
+    window.open(
+      'http://oei.org.mx/'
+      , '_blank' // <- This is what makes it open in a new window.
+    );
+}
+function sep(){
+    window.open(
+      'https://www.gob.mx/sep '
+      , '_blank' // <- This is what makes it open in a new window.
+    );
+}
+function ocde(){
+    window.open(
+      'http://www.oecd.org/centrodemexico/laocde/ '
+      , '_blank' // <- This is what makes it open in a new window.
+    );
+}
+function unesco(){
+    window.open(
+      'http://www.fundaciontelefonica.com.mx/ '
+      , '_blank' // <- This is what makes it open in a new window.
+    );
+}
+function telefonica(){
+    window.open(
+      'https://www.gob.mx/sep '
+      , '_blank' // <- This is what makes it open in a new window.
+    );
+}
 /*------------------------------------------------------------*/
 /*-----------------scroll down button-------------------*/
 function checkScroll(){
