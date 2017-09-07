@@ -24,9 +24,16 @@ window.onclick = function(event) {
     }
 }
 
-function setModal(img){
+function setModal(img, index){
     modal.style.display = "block";
     CurrentPonentePic.src = "resources/img/"+img+".png";
+    var ponenteBiografia = document.getElementsByClassName('ponenteBiografia');
+    for(var i=0; i <= ponenteBiografia.length-1; i++){
+        if(ponenteBiografia[i].style.display != "none"){
+            ponenteBiografia[i].style.display = "none";
+        }
+        ponenteBiografia[index].style.display = "block";
+    }
 }
 
 // When the user clicks the button, open the modal 
@@ -34,6 +41,6 @@ for (var i = 0;i <= ponente.length-1;i++){
     (function () {
         var index = i;
         var pic = ponentePic[i];
-        ponente[i].addEventListener('click', function() { setModal(pic); }, false);
+        ponente[i].addEventListener('click', function() { setModal(pic, index); }, false);
     }());
 }

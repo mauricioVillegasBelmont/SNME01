@@ -16,10 +16,17 @@
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #888;
-    width: 80%;
+    width: 900px;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-   border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
 }
+
 
 /* The Close Button */
 #closeModal {
@@ -35,4 +42,33 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.twitter{
+    display: block;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.twitter_icon{
+    width: 1.5em;
+    margin-right: 5px;
+}
+
+.ponenteBiografia{
+    display: none;
+}
+#ponentesInfo .col20{
+    width: 20%;
+    height: 100%;
+    padding: 25px;
+    float: left;
+}
+#ponentesInfo .col20 img{
+    width: 100%;
+}
+#ponentesInfo .ponenteBiografia{
+    width: 80%;
+    float: right;
+}
+#ponentesInfo .ponenteBiografia p{
+    text-align: justify;
 }

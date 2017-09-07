@@ -10,6 +10,24 @@ var scrollInterval = function(){
 };
 var stopScroll = function() { clearInterval(scrollInterval); };
 
+var organizadoresAnimate = document.querySelectorAll('#organizadores img.animate');
+function doSetTimeoutOrganizadores(index){
+    var time = 500;
+    setTimeout(function(){
+        organizadoresAnimate[index].classList.remove('animate');
+    },time*index+1);
+}
+
+function animateOrganizadores(){
+    organizadoresAnimate = organizadoresAnimate;
+    if(organizadoresAnimate != null && organizadoresAnimate != undefined || organizadoresAnimate > 0){
+        for(var i = 0; i <= organizadoresAnimate.length-1; i++){
+            doSetTimeoutOrganizadores(i)
+        }
+    }
+}
+
+
 function currentButton(index){
     if(index != 0){
         for(var i=0;i<=navButton.length-1;i++){
@@ -80,7 +98,6 @@ function agendaIndex(){
 
 function pageIndex(){
     var thisPage = document.querySelector("section.current");
-    var allPages = document.getElementsByTagName('section');
     var index;
     if(page != null || page != undefined){
         var getChildIndex = function(child){
@@ -97,12 +114,16 @@ function pageIndex(){
         if(index >=1){
             //document.getElementById('title').src = 'resources/img/'+pageTitle[index];
         }
-        if(index == allPages.length-1){
+        if(index == slides.length-2){
             scrollButton.classList.add('active');
         }else if(scrollButton.classList.contains('active')){
             scrollButton.classList.remove('active');
         }
+        if(index == slides.length-1){
+            //animateOrganizadores();
+        }
     }
+    console.log(index);
     return index;
 }
 
@@ -193,6 +214,7 @@ function goTo(elem,index){
         sig.classList.remove('disabled');
     }
     slideIndex = index;
+    pageIndex();
     currentButton(index);
 }
 
