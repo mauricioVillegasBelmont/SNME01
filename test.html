@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Meteored</title>
+    </head>
+    <body>
+	    <div class="result"></div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="dist/meteored.min.js"></script>
+        <script type="text/javascript">
+			$( function() 
+			{
+				"use strict";
+				var $forecast;
+				
+				$forecast = new DailyWeather();
+				$forecast.fetchUpdate('en', 13584, 'YOUR-ID', function(forecasts){
+					$('.result').html('<pre>' + JSON.stringify(forecasts, null, 4)+ '</pre>');	
+				});
+			});		
+		</script>
+    </body>
+</html>

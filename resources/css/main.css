@@ -297,12 +297,24 @@ p .boldItalic, li .boldItalic{
     margin-left: 5px;
 }
 
+#agendaSede{
+    width: 100%; 
+    height: 15%; 
+    background-color: #fff; 
+    padding: 15px; 
+    background-color: #009ADA;
+    -webkit-border-radius: 25px;
+    -moz-   border-radius: 25px;
+            border-radius: 25px;    
+}
+
 /*rieles*/
 .rail{
     position: relative;
     display: block;
     height: 100%;
     cursor:default;
+    margin: 0 auto;
 }
 .rail>div{
     display: table;
@@ -623,6 +635,7 @@ ul.sub li{
     -ms-    transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
 }
+
 #passworContainer #password{
     padding: 4px;
     font-size: 1.5em;
@@ -644,21 +657,39 @@ ul.sub li{
     max-height: 50%;
 }
 #organizadores .table{
+    position: absolute;
+    right: 0;
+    top: 0;
     display: table;
     width: 100%;
     height: 80%;
 }
+
+#organizadores table{
+    width: 100%;
+    height: 80%;
+}
+#organizadores .row{
+    width: 100%;
+    height: auto;
+}
+#organizadores .row td{
+    width: 33%;
+    max-width: 33%;
+}
+
 #organizadores .row{
     display: table-row;
     width: 100%;
     height: 100%;
 }
+
 #organizadores .row div{
     display: table-cell;
-    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
     vertical-align: top;
     min-width: 100px;
-    height: 190px;
+    height: 160px;
 }
 #organizadores .row:first-Child div{
     height: 50px !important;
@@ -669,13 +700,13 @@ ul.sub li{
 }
 #organizadores .row div:first-Child{
     vertical-align: middle;
-    
+    border-left: 1px solid transparent;
 }
 #organizadores .row div:nth-Child(2){
     
 }
 #organizadores .row div:last-Child{
-    border-right: 1px solid transparent;
+    border-left: 1px solid #fff;
 }
 #organizadores .title{
     height: 45px;
@@ -692,4 +723,17 @@ ul.sub li{
 }
 #organizadores .animate{
     width: 90%;
+}
+
+.sede {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 66%;
+    width: 30%;
+    height: 80%;
+    text-align: center;
+}
+.sede img{
+    max-width: 100%;
 }
