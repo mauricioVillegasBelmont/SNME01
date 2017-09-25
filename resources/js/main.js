@@ -39,25 +39,6 @@ function currentButton(index){
     }
 }
 
-function validateForm() {
-    var contraseña = ["simposio2017"];
-    var x = document.getElementById("password").value;
-    var wrongPassword =  "La contraseña que ha introducido no es válida. Revise la ortografía e intente nuevamente";
-    var rightPassword = "Gracias";
-    if (x != contraseña[0]) {
-        document.getElementById("paswordInput").innerHTML = wrongPassword;
-    } else {
-        window.open(
-          'https://www.eventbrite.es/e/entradas-simposio-modelo-educativo-2017-37508236144'
-          , '_blank' // <- This is what makes it open in a new window.
-        );
-        document.getElementById("paswordInput").style.color="#0094A1";
-        document.getElementById("paswordInput").innerHTML = rightPassword;
-        
-    }
-}
-
-
 function agendaIndex(){
     var agendaLi   = document.querySelectorAll(".current .agenda .rail>div>div");
     var agendaData = document.querySelectorAll(".current .agenda .railContent>div>div");
@@ -123,7 +104,7 @@ function pageIndex(){
             //animateOrganizadores();
         }
     }
-    console.log(index);
+    
     return index;
 }
 
@@ -140,7 +121,7 @@ function currentButton(index){
 }
 
 function setCurrent(elem,index){
-    //slideIndex = index;
+    slideIndex = index;
     for(var i = index-1;i>=0;i--){
         if(elem[i].classList.contains('current')){
             elem[i].classList.remove('current');
@@ -150,9 +131,10 @@ function setCurrent(elem,index){
         }
         elem[i].classList.add('prev');
     }
-    elem[index].classList.remove('prev','next');
     elem[index].classList.add('current');
-    for(var i = index+1;i <= elem.length-1;i++){
+    elem[index].classList.remove('prev');
+    elem[index].classList.remove('next');
+    for(var i = index + 1;i <= elem.length - 1;i++){
         if(elem[i].classList.contains('current')){
             elem[i].classList.remove('current');
         }
@@ -248,7 +230,7 @@ function fundacion(){
 }
 function oei(){
     window.open(
-      'http://oei.org.mx/'
+      'http://oei.org.mx'
       , '_blank' // <- This is what makes it open in a new window.
     );
 }
@@ -266,13 +248,13 @@ function ocde(){
 }
 function unesco(){
     window.open(
-      'http://www.fundaciontelefonica.com.mx/ '
+        'http://es.unesco.org/'
       , '_blank' // <- This is what makes it open in a new window.
     );
 }
 function telefonica(){
     window.open(
-      'https://www.gob.mx/sep '
+      'http://www.fundaciontelefonica.com.mx/ '
       , '_blank' // <- This is what makes it open in a new window.
     );
 }

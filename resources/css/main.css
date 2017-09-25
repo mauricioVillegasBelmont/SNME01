@@ -6,12 +6,18 @@ html,body{
     overflow: hidden;
 }
 body *{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     
+}
+
+#mainWrapper #body, #mainWrapper #body #header, #body *, #header *{
     -webkit-transition: all 1.5s ease; /* Safari */
             transition: all 1.5s ease;
 }
+
 img{
+    display: block;
     width: auto;
     height: auto;
 }
@@ -58,7 +64,8 @@ aside{
     height: auto;
     padding: 2%;
     border: 15px solid transparent;
-    border-image: url(../img/borderBlue.svg) 70 round;
+    -o-border-image: url(../img/borderBlue.svg) 60 60 /15px 15px /0px 0px 0px 0px stretch stretch;
+    border-image: url(../img/borderBlue.svg) 60 60 /15px 15px /0px 0px 0px 0px stretch stretch;
     background-color: #009ADA;
     background-clip: padding-box;
     color: #DDDB1C;
@@ -72,18 +79,7 @@ aside ul li{
     color: #fff;
     list-style-image: url(../img/ul.svg);
 }
-h1,
-h2,
-h3 {
-    font-family: 'header';
-    font-size: 2em;
-}
-h4,
-h5,
-h6 {
-    font-family: 'header';
-    font-size: 1.5em;
-}
+
 aside h1,
 aside h2,
 aside h3{
@@ -109,17 +105,6 @@ h6 span{
     display: block;
     font-size: 80%;
 }
-p, li{
-    font-family: 'body';
-    font-size: 1em;
-}
-
-p .boldItalic, li .boldItalic{
-    font-family: 'body';
-    font-size: 100%;
-    font-weight: bold;
-    font-style: italic;
-}
 #mainWrapper{
     position: relative;
     cursor: pointer;
@@ -132,9 +117,6 @@ p .boldItalic, li .boldItalic{
     height: 100%;
 }
 #header{
-    width: 100%;
-    height: 12%;
-    max-height: 12%;
     z-index: 1;
 }
 #header>div:first-child{
@@ -171,12 +153,11 @@ p .boldItalic, li .boldItalic{
 }
 .active #header>div>div:last-child{
     background-color: #fff;
-    width: 70%;
     text-align: right;
 }
 .active #header #headerLogo{
     display: block;
-    max-height: 80%;
+    margin: 0 auto;
     cursor: pointer;
 }
 .active #header #title{
@@ -184,18 +165,20 @@ p .boldItalic, li .boldItalic{
     max-width: 85%;
     margin-right: 30px;
 }
+.active #header a, #header a{
+    color: #000;
+    text-decoration: none;
+}
 #body{
     position: relative;
     width: 100%;
-    height: 75%;
     overflow: hidden;
     z-index: 0;
 }
 #footer{
-    
-    width: 100%;
     height: 8%;
     max-height: 8%;
+    width: 100%;
     z-index: 100;
     -webkit-box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
     -moz-   box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
@@ -204,17 +187,15 @@ p .boldItalic, li .boldItalic{
 #footer>div{
     width: 100%;
     height: 100%;
-    min-width: 900px;
     max-width: 60%;
     margin: 0 auto;
     vertical-align: center;
     text-align: center;
 }
-
 #footer img{
     display: inline-block;
     width:  auto;
-    height: 100%;
+    max-height: 100%;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -224,10 +205,9 @@ p .boldItalic, li .boldItalic{
 #footer img:last-child{
     float: right;
 }
+
 .slideWrapper{
     position: relative;
-    min-width: 900px;
-    max-width: 60%;
     height: auto;
     margin: 0 auto;
 }
@@ -247,7 +227,6 @@ p .boldItalic, li .boldItalic{
     border-left: none;
 }
 .active #header>div>div .navButton{
-    display: block;
     float: left;
     width: 16%;
     min-width: 140px;
@@ -267,6 +246,14 @@ p .boldItalic, li .boldItalic{
 }
 .active #header>div>div .navButton:hover{
     border-bottom: 5px solid #0094A1;
+}
+
+#portadaImg{
+    display: block;
+    
+    margin: 0 auto;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
 }
 
 /*#agenda*/
@@ -298,11 +285,10 @@ p .boldItalic, li .boldItalic{
 }
 
 #agendaSede{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-line-pack: stretch;
 	align-content: stretch;
     width: 100%; 
     height: 15%; 
@@ -350,7 +336,9 @@ p .boldItalic, li .boldItalic{
 .rail>div>div:hover>div:last-child{
     background-color: #dfdfdf;
 }
-
+.rail img{
+    margin: 0 auto;
+}
 /*#a25M{
     background-image: url(../img/agenda_25M-25.svg);
     
@@ -454,14 +442,43 @@ p .boldItalic, li .boldItalic{
     top:50%;
     display: block;
     border: 15px solid transparent;
+    -o-border-image: url(../img/borderGreen.svg) 50 round;
     border-image: url(../img/borderGreen.svg) 50 round;
     background-color: #DDDB1C;
     background-clip: padding-box;
 }
+#agendaSection #agendaSede img{
+    display: inline-block;
+    width: 55%;
+    height: auto;
+}
+#agendaSection #agendaSede img:first-child{
+    float: left;
+    width: 20%;
+    height: auto;
+}
+#agendaSection #agendaSede img:last-child{
+    float: right;
+    width: 20%;
+    height: auto;
+}
+#agendaTable{
+    display: block;
+    margin: 25px auto;
+}
 
+#agendaTable table, #agendaTable tr{
+    width: 100%;
+    vertical-align: top;
+    border-collapse: collapse;
+}
 
-
-
+#agendaTable tr td:last-child {
+    width: calc(100% - 420px);  
+}
+#agendaTable img{
+    width: 100%;
+}
 /*ponentes*/
 #ponentes .rail{
     width: 75%;
@@ -536,7 +553,7 @@ section.prev{
     -webkit-transform: rotateY(-150deg); /* Safari */
             transform: rotateY(-150deg);
     left: -110%;
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
     pointer-events: none;
     
@@ -663,7 +680,7 @@ ul.sub li{
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
 }
 #organizadores .slideWrapper{
-    max-height: 50%;
+    max-height: 80%;
 }
 #organizadores .table{
     position: absolute;
@@ -676,16 +693,21 @@ ul.sub li{
 
 #organizadores table{
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
+#organizadores tr:first-child td, #organizadores tr:last-child td{
+    height: auto;
+}
+
+
+
+
+
 #organizadores .row{
     width: 100%;
     height: auto;
 }
-#organizadores .row td{
-    width: 33%;
-    max-width: 33%;
-}
+
 
 #organizadores .row{
     display: table-row;
@@ -733,7 +755,11 @@ ul.sub li{
 #organizadores .animate{
     width: 90%;
 }
-
+.clicOrganizaIcons{
+    height: 20%;
+    color: #fff;
+    text-align:center;
+}
 .sede {
     position: absolute;
     top: 0;

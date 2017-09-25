@@ -18,9 +18,9 @@
     margin: auto;
     padding: 50px;
     border: 1px solid #888;
-    width: 900px;
+    
     height: auto;
-    max-height: 80%;
+    
     overflow-y: auto;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-   border-radius: 10px 10px 10px 10px;
@@ -57,7 +57,7 @@
     display: none;
 }
 #ponentesInfo .col20{
-    width: 20%;
+    
     height: 100%;
     padding: 25px;
     float: left;
