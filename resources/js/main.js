@@ -11,6 +11,29 @@ var scrollInterval = function(){
 var stopScroll = function() { clearInterval(scrollInterval); };
 
 var organizadoresAnimate = document.querySelectorAll('#organizadores img.animate');
+
+function setAgendaPictures(){
+    var windowWidth = window.innerWidth;
+    var sedeHeaderIMG = document.getElementById('sedeHeaderIMG');
+    var agedaPic = document.getElementsByClassName('agedaPic');
+    var responsivePictures = ['responsive_agenda-25M.svg','responsive_agenda-26M.svg','responsive_agenda-26V.svg'];
+    var nonResponsivePictures = ['agenda-25M.svg','agenda-26M.svg','agenda-26V.svg'];
+    console.log(agedaPic.length);
+    if(windowWidth <= 1024){
+        for(var i = 0;i <= agedaPic.length-1; i++){
+            agedaPic[i].src = 'resources/img/'+responsivePictures[i];
+            //console.log('agedaPic: res' + agedaPic[i]);
+        }
+        sedeHeaderIMG.src = 'resources/img/responsive_sedeHeader.png';
+    }else{
+        for(var i = 0;i <= agedaPic.length-1; i++){
+            agedaPic[i].src = 'resources/img/'+nonResponsivePictures[i];
+            //console.log('agedaPic nonR: ' + agedaPic[i]);
+        }
+        sedeHeaderIMG.src = 'resources/img/sedeHeader.png';
+    }
+}
+
 function doSetTimeoutOrganizadores(index){
     var time = 500;
     setTimeout(function(){
@@ -275,6 +298,24 @@ function scrollBottom(){
 }
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
+var fotoSedeElements =['JTB0.JPG','JTB1.JPG','JTB2.JPG'];
+
+function fotosede(pic){
+    var fotoSedeDisplay = document.getElementById('fotoSedeDisplay');
+    var fotoSede = document.getElementsByClassName('fotoSede');
+    for(var i = 0; i <= fotoSede.length-1; i++){
+        if(i == pic){
+            fotoSedeDisplay.src = 'resources/img/'+fotoSedeElements[pic];
+            fotoSede[pic].classList.add('selected');
+        }else{
+            if(fotoSede[i].classList.contains('selected')){
+               fotoSede[i].classList.remove('selected');
+            }
+        }
+    }
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
     
 document.addEventListener('DOMContentLoaded', function(){
     setCurrent(slides,slideIndex);
@@ -282,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function(){
     ant.classList.add('disabled'),
     ant.addEventListener('click',function(){horizontalNav(ant,-1)},false);
     sig.addEventListener('click',function(){horizontalNav(sig,1)} ,false);
-    
+    setAgendaPictures();
     //window.addEventListener("mousewheel", checkScroll, false);
     //window.addEventListener("touchmove", checkScroll, false);
 }, false);

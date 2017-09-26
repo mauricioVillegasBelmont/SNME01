@@ -37,12 +37,7 @@
         max-height: 12%;
         font-size: 100%;
     }
-    .active #header>div>div .navButton{
-        width: calc(100% / 7);
-        min-width: 140px;
-        display: block;
-        padding: 1% 2%;
-    }
+    
     .active #header>div>div:last-child{
         width: 70%;
     }
@@ -65,7 +60,6 @@
     #body{
         height: 75%;
     }
-    
     #portadaImg{
         height: 90%;
     }
@@ -126,12 +120,6 @@
         max-height: 12%;
         font-size: 80%;
     }
-    .active #header>div>div .navButton{
-        width: 14%;
-        min-width: 140px;
-        display: block;
-        padding: 1% 2%;
-    }
     #portadaImg{
         width: 90%;
     }
@@ -147,6 +135,9 @@
     }
     .active #header>div>div>div{
         width: 15%;
+    }
+    .active #header>div>div .navButton{
+        display: block;
     }
     .slideWrapper{
         padding: 0 20px;
@@ -303,9 +294,6 @@
     
     .active #body{
         height: calc(100% - 140px);
-    }
-    #agendaTable img{
-        margin-left: 10px;
     }
     #footer{
         height: 60px;

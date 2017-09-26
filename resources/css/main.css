@@ -228,10 +228,7 @@ h6 span{
 }
 .active #header>div>div .navButton{
     float: left;
-    width: 16%;
-    min-width: 140px;
-    min-height: 60%;
-    padding: 1% 2%;
+    height: auto;
     border-left: 1px solid #dfdfdf;
     border-bottom: 5px solid #fff;
     font-family: 'header';
@@ -301,6 +298,7 @@ h6 span{
 }
 #agendaSede img{
     display: block;
+    width: 100%;
 }
 
 /*rieles*/
@@ -447,21 +445,21 @@ h6 span{
     background-color: #DDDB1C;
     background-clip: padding-box;
 }
-#agendaSection #agendaSede img{
+#sede #agendaSede img{
     display: inline-block;
-    width: 55%;
+    width: 100%;
     height: auto;
 }
-#agendaSection #agendaSede img:first-child{
+/*#sede #agendaSede img:first-child{
     float: left;
     width: 20%;
     height: auto;
 }
-#agendaSection #agendaSede img:last-child{
+#sede #agendaSede img:last-child{
     float: right;
     width: 20%;
     height: auto;
-}
+}*/
 #agendaTable{
     display: block;
     margin: 25px auto;
@@ -780,4 +778,28 @@ ul.sub li{
     width: 100%;
     max-width: 600px;
     min-height: 350px;
+}
+.fotoSedeWrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.fotoSede1{
+    width: 100%;
+    margin-top: 20px;
+}
+.fotoSede{
+    width: calc(100% / 3 - 20px);
+    float: left;
+    margin-top: 20px;
+    opacity: 1;
+}
+.fotoSede:first-child,.fotoSede:nth-child(2){
+    margin-right: 30px;
+}
+.fotoSede:last-child{
+    
+}
+.fotoSedeWrapper .selected{
+    opacity: 0.5;
 }

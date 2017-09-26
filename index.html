@@ -22,7 +22,8 @@
                     <div class="navButton" onclick="goTo(slides,2)">Objetivo General</div>
                     <div class="navButton" onclick="goTo(slides,3)">Agenda</div>
                     <div class="navButton" onclick="goTo(slides,4)">Ponentes</div>
-                    <div class="navButton" onclick="goTo(slides,5)">Organizadores</div>
+                    <div class="navButton" onclick="goTo(slides,5)">Sede</div>
+                    <div class="navButton" onclick="goTo(slides,6)">Organizadores</div>
                 </div>
             </div>
         </div>
@@ -51,11 +52,6 @@
                 </div>
             </section>
             <section id="agendaSection" class="">
-                <div id="agendaSede" class="slideWrapper" style=""> 
-                    <img style="float: left; height: 100%;" src="resources/img/INAH_white.png"> 
-                    <img style="margin:0 auto; height: 100%;" src="resources/img/MNAH_date.svg"> 
-                    <img style="float: right; height: 100%;" src="resources/img/white_MNA.svg"> 
-                </div>
                 <div id="agendaTable">
                     <table id="" style="">
                         <tr>
@@ -87,7 +83,7 @@
                                     </ul>
                                 </aside>
                             </td>
-                            <td> <img src="resources/img/agenda-25M.svg"> </td>
+                            <td> <img class="agedaPic" src=""> </td>
                         </tr>
                         <tr>
                             <td>
@@ -104,7 +100,7 @@
                                     </ul>
                                 </aside>
                             </td>
-                            <td> <img src="resources/img/agenda-26M.svg"> </td>
+                            <td> <img class="agedaPic" src=""> </td>
                         </tr>
                         <tr>
                             <td>
@@ -133,7 +129,7 @@
                                     </ul>
                                 </aside>
                             </td>
-                            <td> <img src="resources/img/agenda-26V.svg"> </td>
+                            <td> <img class="agedaPic" src=""> </td>
                         </tr>
                     </table>
                 </div>
@@ -337,6 +333,20 @@
                     </div>
                 </div>
             </section>
+            <section id="sede" class="">
+                <div class="slideWrapper">
+                    <div id="agendaSede" class="" style=""> 
+                        <img id="sedeHeaderIMG" style="" src="resources/img/sedeHeader.png"> 
+                    </div>
+                    <img id="fotoSedeDisplay" class="fotoSede1" src="resources/img/JTB0.jpg">
+                    <div class="fotoSedeWrapper">
+                        <img class="fotoSede selected" onclick="fotosede(0)" src="resources/img/JTB0.JPG">
+                        <img class="fotoSede" onclick="fotosede(1)" src="resources/img/JTB1.JPG">
+                        <img class="fotoSede" onclick="fotosede(2)" src="resources/img/JTB2.JPG">
+                    </div>
+                
+                </div>
+            </section>
             <section id="organizadores" class="blackBg">
                 <div class="slideWrapper" style="height:100%;">
                     <table>
@@ -365,8 +375,14 @@
                         </tr>
                     </table>
                 </div>
-                <!--<p class="clicOrganizaIcons" style="">Haz clic en los iconos para conocer m&aacute;s informaci&oacute;n acerca de los organizadores y organismos internacionales participantes</p>-->
             </section>
+        </div>
+        <div id="footer" class="whiteBg">
+            <div> 
+                <img src="resources/img/footer-01.svg" onclick="oei()"> 
+                <img src="resources/img/footer-02.svg" onclick="fundacion()"> 
+                <img src="resources/img/footer-03.svg" onclick="sep()"> 
+            </div>
         </div>
         <!-- The Modal -->
         <div id="ponentesInfo" class="modal">
@@ -375,9 +391,9 @@
                 <div id="biography">
                     <div class="col20"> <img> </div>
                     <div class="col80">
-                        
+                        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                        <div id="player"></div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/nHslEdP6y8s">
                             <h3>Aurelio Nu&ntilde;o</h3>
                             <p><span>Secretario de Educaci&oacute;n P&uacute;blica (12 de diciembre de 1977)</span></p>
                             <p>Pol&iacute;tico mexicano, militante del Partido Revolucionario Institucional desde el a&ntilde;o 2004 e integrante de su Consejo Pol&iacute;tico Nacional. Al inicio del gobierno del Presidente Enrique Pe&ntilde;a Nieto, se desempe&ntilde;&oacute; como Jefe de la Oficina de la Presidencia de la Rep&uacute;blica. El 27 de agosto de 2015, recibi&oacute; el nombramiento como Secretario de Educaci&oacute;n P&uacute;blica, cargo que ocupa actualmente.</p>
@@ -387,13 +403,9 @@
                             <p>Fue miembro del Consejo Rector del Pacto por M&eacute;xico, desde donde particip&oacute; en la negociaci&oacute;n de las 13 reformas estructurales. Fungi&oacute; como uno de los principales interlocutores con diputados, senadores y presidentes ejecutivos nacionales de los diferentes partidos pol&iacute;ticos, as&iacute; como con los gobiernos estatales de diversas entidades federativas. En particular, fue designado enlace del Presidente de la Rep&uacute;blica con los gobiernos del Estado de M&eacute;xico y del Distrito Federal.</p>
                             <p>Al mismo tiempo, particip&oacute; en la coordinaci&oacute;n de las principales pol&iacute;ticas p&uacute;blicas y proyectos del Gobierno de la Rep&uacute;blica, como por ejemplo el Nuevo Aeropuerto de la Ciudad de M&eacute;xico, la Cruzada Nacional contra el Hambre, PROSPERA, las Zonas Econ&oacute;micas Especiales, el Plan Michoac&aacute;n, el Plan Nuevo Guerrero, entre otros.</p>
                             <p>Aurelio Nu&ntilde;o era responsable de dise&ntilde;ar y coordinar la estrategia de comunicaci&oacute;n del Gobierno Federal, as&iacute; como la agenda nacional de riesgos.</p>
-                            <a class="twitter" target="_blank" href="https://twitter.com/aurelionuno">
-                                <img class="twitter_icon" src="resources/img/twitter-icon.png">
-                                @aurelionuno
-                            </a>
+                            <a class="twitter" target="_blank" href="https://twitter.com/aurelionuno"> <img class="twitter_icon" src="resources/img/twitter-icon.png"> @aurelionuno </a>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/UQa-jhO7Hhw">
                             <h3>Javier Trevi&ntilde;o Cant&uacute;</h3>
                             <p><span>Subsecretario Educaci&oacute;n B&aacute;sica</span></p>
                             <p>Pol&iacute;tico mexicano, miembro del Partido Revolucionario Institucional, ha sido entre otros cargos Secretario General de Gobierno de Nuevo Le&oacute;n y diputado federal. El 4 de octubre del 2015 fue nombrado Subsecretario de Educaci&oacute;n B&aacute;sica de la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica.</p>
@@ -402,10 +414,8 @@
                             <p>El 1 de diciembre de 1994 Ernesto Zedillo lo nombr&oacute; Subsecretario de Cooperaci&oacute;n Internacional de la Secretar&iacute;a de Relaciones Exteriores, siendo el titular de la misma Jos&eacute; &Aacute;ngel Gurr&iacute;a; permaneci&oacute; en el cargo hasta 1998. Dentro de La C&aacute;mara de Diputados es secretario de las comisiones de Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaci&oacute;n, de Energ&iacute;a, y de Hacienda y Cr&eacute;dito P&uacute;blico, adem&aacute;s de integrante de la de Asuntos Migratorios.</p>
                             <!--<a class="twitter"  target="_blank" href="https://twitter.com/Otto2025">
                                 <img class="twitter_icon" src="resources/img/twitter-icon.png"> 
-                            </a>-->
-                        </div>
+                            </a>--></div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/2yM0w7gDo58">
                             <h3>Otto Granados Rold&aacute;n</h3>
                             <p><span>Subsecretario de Planeaci&oacute;n, Evaluaci&oacute;n y Coordinaci&oacute;n (24 de noviembre de 1956)</span></p>
                             <p>Funcionario p&uacute;blico, consultor, acad&eacute;mico y diplom&aacute;tico mexicano. Ha desempe&ntilde;ado una extensa carrera en la actividad profesional y acad&eacute;mica, las funciones de gobierno y los asuntos internacionales. El 1 de octubre de 2015 fue nombrado Subsecretario de Planeaci&oacute;n, Evaluaci&oacute;n y Coordinaci&oacute;n de la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica.</p>
@@ -414,29 +424,20 @@
                             <p>Ha sido Secretario Particular de don Jes&uacute;s Reyes Heroles cuando &eacute;ste se desempe&ntilde;aba como Secretario de Educaci&oacute;n P&uacute;blica; consejero pol&iacute;tico de la embajada de M&eacute;xico en Espa&ntilde;a y Oficial Mayor de la Secretar&iacute;a de Programaci&oacute;n y Presupuesto encabezada entonces por Carlos Salinas de Gortari. Posteriormente, Granados fue designado Secretario de Informaci&oacute;n del Comit&eacute; Ejecutivo Nacional del PRI; poco despu&eacute;s, Coordinador General de Comunicaci&oacute;n Social de la campa&ntilde;a presidencial, fue Director General de Comunicaci&oacute;n Social y Vocero de la Presidencia de la Rep&uacute;blica de 1988 a 1992.</p>
                             <p>En 1990 fue condecorado por el Gobierno de Espa&ntilde;a con la Orden al M&eacute;rito Civil, en Grado de Gran Cruz. En 1992 el National Council of La Raza lo reconoci&oacute; por sus generosas contribuciones a la poblaci&oacute;n hispana en Estados Unidos. En 1994 fue designado Global Leader por el World Economic Forum de Davos, a cuyas reuniones anuales y/o regionales ha acudido en las &uacute;ltimas dos d&eacute;cadas. En 2015 fue distinguido por el Gobierno de Chile con la Orden Bernardo O´Higgins en grado de Gran Cruz.</p>
                             <p>Ha sido profesor-investigador en el Tecnol&oacute;gico de Monterrey, y por diez ocasiones fue distinguido por sus alumnos como el mejor profesor. Adem&aacute;s, fue consejero y miembro del Comit&eacute; de &Eacute;tica del Tecnol&oacute;gico de Monterrey; co-dirigi&oacute; diversos programas acad&eacute;micos de capacitaci&oacute;n para funcionarios p&uacute;blicos en la Fundaci&oacute;n Ortega y Gasset y el Centro de Estudios sobre M&eacute;xico de la Uni&oacute;n Europea de Madrid, Espa&ntilde;a; e imparte regularmente numerosas conferencias y seminarios sobre competitividad, innovaci&oacute;n, educaci&oacute;n y gesti&oacute;n p&uacute;blica.</p>
-                            <a class="twitter" target="_blank" href="https://twitter.com/Otto2025">
-                                <img class="twitter_icon" src="resources/img/twitter-icon.png">@Otto2025
-                            </a>
-                            
+                            <a class="twitter" target="_blank" href="https://twitter.com/Otto2025"> <img class="twitter_icon" src="resources/img/twitter-icon.png">@Otto2025 </a>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/Ne9bdM3ZYQk">
                             <h3>Marcial Marin Hell&iacute;n</h3>
                             <p><span>Secretario de Estado de Educaci&oacute;n del Ministerio de Educaci&oacute;n, Cultura y Deporte de Espa&ntilde;a. ( 10 de febrero de 1968)</span></p>
-                            <p>Economista, empresario y pol&iacute;tico espa&ntilde;ol  y ex consejero de Educaci&oacute;n, Cultura y Deporte de Castilla-La Mancha.</p>
+                            <p>Economista, empresario y pol&iacute;tico espa&ntilde;ol y ex consejero de Educaci&oacute;n, Cultura y Deporte de Castilla-La Mancha.</p>
                             <p>licenciado en Ciencias Econ&oacute;micas y Empresariales por la Universidad de Murcia y tiene un m&aacute;ster en Gesti&oacute;n y Direcci&oacute;n de Empresas en el IESE Business School. Adem&aacute;s, es t&eacute;cnico superior en Riesgos Laborales - Seguridad de la Empresa por la Universidad Empresa.</p>
                             <p>Desde 1998 hasta mayo de 2007, fue director gerente de la Asociaci&oacute;n de Empresarios de Campollano. Ocup&oacute; responsabilidades de perfil directivo-t&eacute;cnico en FEDA-CEEI-Albacete, C&aacute;mara de Comercio e Industria de Albacete y fue director de proyectos en la Coordinadora Espa&ntilde;ola de Pol&iacute;gonos.</p>
                             <p>En las elecciones a las Cortes de Castilla-La Mancha de 2007 fue elegido diputado regional del Partido Popular y renov&oacute; su esca&ntilde;o en las elecciones de 2011. En las Cortes Regionales, desempe&ntilde;&oacute; los puestos de secretario general del Grupo Parlamentario Popular, portavoz de Ordenaci&oacute;n del Territorio y Vivienda y coordinador de Econom&iacute;a, Trabajo, Empresas P&uacute;blicas e Industria del Grupo Parlamentario. Asimismo, ha sido portavoz de Econom&iacute;a del PP en Castilla-La Mancha, perteneciendo actualmente al Comit&eacute; Ejecutivo de la formaci&oacute;n.</p>
                             <p>Entre 2011 y 2015 fue consejero de Educaci&oacute;n, Cultura y Deportes de Castilla-La Mancha. El 3 de julio de 2015 fue nombrado secretario de Estado de Educaci&oacute;n en sustituci&oacute;n de Montserrat Gomendio, siendo ratificado en el cargo el 11 de noviembre de 2016, con &Iacute;&ntilde;igo M&eacute;ndez de Vigo al frente del Ministerio.</p>
                             <p>En mayo de 2011, fue elegido concejal en el Ayuntamiento de Albacete, puesto que dej&oacute; para ser nombrado consejero. As&iacute; como, desde junio de 1995 hasta mayo de 1999, fue concejal en el Ayuntamiento de Fuente&aacute;lamo.</p>
-                            <a class="twitter" target="_blank" href="https://twitter.com/marcialmarinh">
-                                <img class="twitter_icon" src="resources/img/twitter-icon.png">
-                                @marcialmarinh
-                            </a>
+                            <a class="twitter" target="_blank" href="https://twitter.com/marcialmarinh"> <img class="twitter_icon" src="resources/img/twitter-icon.png"> @marcialmarinh </a>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/kq48G7tYjgQ">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/sU8YSgiDggw">
                             <h3>Valentina Quiroga Canahuate</h3>
                             <p><span>Ingeniero Civil y Mag&iacute;ster en Econom&iacute;a Aplicada de la Universidad de Chile.</span></p>
                             <p>En septiembre de 2008 fund&oacute; el movimiento ciudadano Educaci&oacute;n 2020 junto a estudiantes de la Universidad Cat&oacute;lica y Universidad de Chile, el que surge con el prop&oacute;sito de que Chile tenga al a&ntilde;o 2020 una educaci&oacute;n de calidad y con equidad para todos.</p>
@@ -445,7 +446,6 @@
                             <p>Entre sus &aacute;reas de inter&eacute;s profesional destacan la investigaci&oacute;n y el desarrollo de pol&iacute;ticas p&uacute;blicas en general, especialmente en educaci&oacute;n.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/te5ACbZFLHo">
                             <h3>Elisa Bonilla Rius</h3>
                             <p><span>Directora General de Desarrollo Curricular (DGDC) de la SEB – SEP.</span></p>
                             <p>Licenciada en matem&aacute;ticas por la UNAM, tiene una maestr&iacute;a en educaci&oacute;n por la Universidad de Cambridge y es candidata a doctor en educaci&oacute;n, por esa misma universidad. Ha sido profesora en casi todos los niveles educativos e investigadora en educaci&oacute;n <i>(CINVESTAV-IPN).</i> Entre 1993 y 2007 fue <i>Directora General de Materiales y M&eacute;todos Educativos</i> en la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica de M&eacute;xico, donde particip&oacute; en la puesta en marcha de varias reformas curriculares: <i>educaci&oacute;n primaria y secundaria, 1993, educaci&oacute;n normal, 1997, y educaci&oacute;n secundaria, 2006; </i>y la renovaci&oacute;n de la <i>tercera generaci&oacute;n de libros de texto gratuitos para educaci&oacute;n primaria.</i> Tambi&eacute;n en la SEP coordin&oacute; el <i>Programa Nacional de Lectura,</i> de 2001 a 2007, el cual intensific&oacute; la distribuci&oacute;n de libros literarios e informativos a todas las escuelas p&uacute;blicas de educaci&oacute;n b&aacute;sica de M&eacute;xico, para crear en ellas bibliotecas de aula y fortalecer los acervos de las bibliotecas escolares.</p>
@@ -454,14 +454,12 @@
                             <p>A menudo participa como ponente en foros nacionales e internacionales. Tiene diversas publicaciones acad&eacute;micas y de divulgaci&oacute;n. Entre ellas destacan: <i>El prisionero de la verdad: Bertrand Russell, Colecci&oacute;n viajeros del conocimiento, Conaculta, M&eacute;xico, 1992;</i> y, en colaboraci&oacute;n con Daniel Goldin y Ram&oacute;n Salaberria, <i>Bibliotecas y escuelas: retos y posibilidades en la sociedad del conocimiento, Oc&eacute;ano Traves&iacute;a, 2008.</i></p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/lscCHYpmUws">
                             <h3>Carlos Mancera Corcuera</h3>
                             <p><span>Director del Consejo Nacional de Participaci&oacute;n Social en Educaci&oacute;n (CONAPASE).</span></p>
                             <p>Actualmente se desempe&ntilde;a como Director del Consejo Nacional de Participaci&oacute;n Social en Educaci&oacute;n <i>(CONAPASE).</i></p>
                             <p>Desde 1988, Carlos Mancera Corcuera, ocup&oacute; diversos cargos en dependencias de la administraci&oacute;n p&uacute;blica federal, en las secretar&iacute;as de Programaci&oacute;n y Presupuesto y Educaci&oacute;n P&uacute;blica; tambi&eacute;n fue director adjunto de Pol&iacute;tica Cient&iacute;fica y Tecnol&oacute;gica del <i>Conacyt.</i> Fue subsecretario de Planeaci&oacute;n y Coordinaci&oacute;n de la SEP, cargo que ocup&oacute; de 1994 a 2001. Desde mayo de 2001 se ha dedicado a la consultor&iacute;a en temas educativos, especialmente en planeaci&oacute;n y evaluaci&oacute;n. Recientemente, fue llamado por el jefe de gobierno de la ciudad de M&eacute;xico, Miguel &Aacute;ngel Mancera como asesor externo en la redacci&oacute;n de la nueva constituci&oacute;n.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/62UiI-hAfFA ">
                             <h3>Gabriela Ramos</h3>
                             <p><span>Directora del Gabinete del Secretario General de la OCDE.</span></p>
                             <p>Directora de Gabinete de la OCDE, Sherpa ante el G20 y Consejera Especial para el Secretario General. Desde 2006, ha sido Coordinadora de Asesores del Secretario General, apoyando la agenda estrat&eacute;gica y contribuyendo en la apertura de la Organizaci&oacute;n a los nuevos pa&iacute;ses miembros y pa&iacute;ses asociados.</p>
@@ -475,23 +473,17 @@
                             <p>En 2013 fue condecorada por el Presidente de Francia, François Hollande, como miembro de la Orden del M&eacute;rito en grado de "chevalier" por sus contribuciones para fortalecer las relaciones con Francia.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/0fNsmOUApCM">
                             <h3>Pablo Cevallos Estarellas</h3>
-                            
                             <p><span>Director de la Oficina para Am&eacute;rica Latina del Instituto Internacional de Planeamiento de la Educaci&oacute;n (IIPE &#8212; UNESCO).</span></p>
                             <p>Cuenta con un doctorado en Pedagog&iacute;a y una maestr&iacute;a en Educaci&oacute;n y Pensamiento Cr&iacute;tico de la Montclair State University, de Nueva Jersey, Estados Unidos. Se ha desempe&ntilde;ado como docente a nivel secundario y universitario en algunas instituciones de Ecuador y Estados Unidos.</p>
                             <p>Ha sido profesor en las &aacute;reas de Educaci&oacute;n y de Filosof&iacute;a en la Universidad San Francisco de Quito, Ecuador. Ha trabajado como consultor internacional y ha sido invitado a participar como conferencista en varios pa&iacute;ses de la regi&oacute;n latinoamericana. Entre 2007 y 2010 fue parte del equipo directivo del Ministerio de Educaci&oacute;n de Ecuador, y entre 2010 y 2013 ocup&oacute; el cargo de Viceministro de Educaci&oacute;n de ese pa&iacute;s. Sus &aacute;reas de investigaci&oacute;n y publicaciones se relacionan con el estudio de las reformas educativas en Am&eacute;rica Latina, la formaci&oacute;n inicial de docentes, la filosof&iacute;a de la educaci&oacute;n, la educaci&oacute;n para la ciudadan&iacute;a, as&iacute; como la pedagog&iacute;a de la escritura acad&eacute;mica, la filosof&iacute;a y el pensamiento cr&iacute;tico.</p>
-
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/pllV9wA8g1o">
                             <h3>Arturo Vel&aacute;zquez Jim&eacute;nez</h3>
                             <p><span>Director de la OEI en M&eacute;xico.</span></p>
                             <p>Director de la Organizaci&oacute;n de Estados Iberoamericanos en M&eacute;xico (OEI). Autor de diversas publicaciones en ciencias administrativas y de planeaci&oacute;n universitaria. Se ha desempe&ntilde;ado como Director General de Planeaci&oacute;n Educativa en la SEP, Coordinador de Programas Acad&eacute;micos de la ANUIES, as&iacute; como m&uacute;ltiples cargos como Director General en la UNAM.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/H_xUAkWJ6Vw">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/WelLwZ3-jM0">
                             <h3>Mariano Jabonero Blanco</h3>
                             <p><span>Director Global de Educaci&oacute;n de la Fundaci&oacute;n Santillana.</span></p>
                             <p>Licenciado en Filosof&iacute;a y en Ciencias de la Educaci&oacute;n por la Universidad Complutense de Madrid, con estudios de postgrado en administraci&oacute;n y supervisi&oacute;n de la educaci&oacute;n.</p>
@@ -503,7 +495,6 @@
                             <p>Por su contribuci&oacute;n a la educaci&oacute;n le han sido concedidas diferentes distinciones en pa&iacute;ses de Am&eacute;rica Latina y, en Espa&ntilde;a, la Orden de Alfonso X el Sabio.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/IRx2yn35O1Q">
                             <h3>Juan Luis Arzoz Arbide</h3>
                             <p><span>Director de Fundaci&oacute;n Santillana en M&eacute;xico.</span></p>
                             <p>Egresado de la Universidad An&aacute;huac en la Ciudad de M&eacute;xico en Ingenier&iacute;a Industrial, donde forma parte del “Consejo de Egresados” de la Facultad de Ingenier&iacute;a. Es graduado tambi&eacute;n en Alta Direcci&oacute;n en el IPADE (Instituto Mexicano de Alta Direcci&oacute;n de Empresa).</p>
@@ -513,7 +504,6 @@
                             <p>La Fundaci&oacute;n Santillana, es una entidad l&iacute;der a nivel regional que desde 1979 tiene como objetivo la promoci&oacute;n y extensi&oacute;n de la educaci&oacute;n en Am&eacute;rica Latina y Espa&ntilde;a. Para ello cuenta con sedes en Madrid, Bogot&aacute;, Buenos Aires, Sao Paulo, Lima y Santiago de Chile, y actividades en la mayor parte de pa&iacute;ses de la regi&oacute;n.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/YooLshKP0xM">
                             <h3>Lorenzo G&oacute;mez-Mor&iacute;n Fuentes</h3>
                             <p><span>Ocean&oacute;logo con maestr&iacute;a en oceanograf&iacute;a costera por la Universidad Aut&oacute;noma de Baja California.</span></p>
                             <p>Egresado de la Facultad de Ciencias Marinas de la Universidad Aut&oacute;noma de Baja California (UABC), en donde obtuvo tambi&eacute;n la Maestr&iacute;a en Oceanograf&iacute;a Costera.</p>
@@ -522,39 +512,31 @@
                             <p>Desde Septiembre de 2010 colabora en la Facultad Latinoamericana de Ciencias Sociales, Sede M&eacute;xico, coordinando el proyecto de apoyo y acompa&ntilde;amiento acad&eacute;mico y formaci&oacute;n de funcionarios para la Subsecretar&iacute;a de Educaci&oacute;n Media Superior de la SEP.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/7iM_QdFKb2M">
                             <h3>Ricardo Cuenca Pareja</h3>
                             <p><span>Doctor en educaci&oacute;n en la Universidad Aut&oacute;noma de Madrid.</span></p>
                             <p>Psic&oacute;logo Social, doctor (c) en Educaci&oacute;n en la Universidad de Kaiserslautern (Alemania); obtuvo el DEA en la Universidad de Sevilla (Espa&ntilde;a); y el grado de magister en investigaci&oacute;n y docencia en educaci&oacute;n superior en la Universidad Peruana Cayetano Heredia. Actualmente, es director de investigaciones del Instituto de Estudios Peruanos (IEP); director de publicaciones y miembro fundador de la Sociedad de Investigaci&oacute;n Educativa Peruana (SIEP).</p>
                             <p>Es miembro de la Red de Trabajo Docente de CLACSO y del consejo cient&iacute;fico de la Revista Electr&oacute;nica Iberoamericana sobre Calidad, Eficacia y Cambio en Educaci&oacute;n (REICE), y de la Revista Internacional de Educaci&oacute;n para la Justicia Social (RIEJS). Es profesor del departamento de humanidades y de educaci&oacute;n de la Pontificia Universidad Cat&oacute;lica del Per&uacute;. Ha sido Presidente del Foro Educativo del Per&uacute;, coordinador del Programa de Educaci&oacute;n de la Cooperaci&oacute;n Alemana en el Per&uacute; (PROEDUCA-GTZ) y responsable del componente de investigaci&oacute;n del Programa Regional de Pol&iacute;ticas para la Profesi&oacute;n Docente de la Oficina Regional de Educaci&oacute;n de la Unesco para Am&eacute;rica Latina y el Caribe (OREALC) en Chile.</p>
-                            <p>En la actualidad lidera los proyectos de investigaci&oacute;n “Educaci&oacute;n superior, movilidad social, empleabilidad e inclusi&oacute;n: nuevas perspectivas” y “Del Plan Inca al Perro del Hortelano: 40 a&ntilde;os de pol&iacute;ticas docentes en el Per&uacute;”. Sus m&aacute;s recientes consultor&iacute;as incluyen la asesor&iacute;a al Ministerio de Educaci&oacute;n del Ecuador y de Honduras, y a la Universidad Ind&iacute;gena Intercultural del Fondo Ind&iacute;gena en Bolivia.</p>
-                            https://twitter.com/richicuenca?lang=es
-                            <a target="_blank" href="https://twitter.com/richicuenca?lang=es">
-                                <img class="twitter_icon" src="resources/img/twitter-icon.png">
-                            </a>
+                            <p>En la actualidad lidera los proyectos de investigaci&oacute;n “Educaci&oacute;n superior, movilidad social, empleabilidad e inclusi&oacute;n: nuevas perspectivas” y “Del Plan Inca al Perro del Hortelano: 40 a&ntilde;os de pol&iacute;ticas docentes en el Per&uacute;”. Sus m&aacute;s recientes consultor&iacute;as incluyen la asesor&iacute;a al Ministerio de Educaci&oacute;n del Ecuador y de Honduras, y a la Universidad Ind&iacute;gena Intercultural del Fondo Ind&iacute;gena en Bolivia.</p> https://twitter.com/richicuenca?lang=es
+                            <a target="_blank" href="https://twitter.com/richicuenca?lang=es"> <img class="twitter_icon" src="resources/img/twitter-icon.png"> </a>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/qzD2Ir49re4">
                             <h3>Seraf&iacute;n Ant&uacute;nez Marcos</h3>
                             <p><span>Catedr&aacute;tico en el Departamento de Did&aacute;ctica y Organizaci&oacute;n Educativa de la Facultad de Pedagog&iacute;a de la Universidad de Barcelona.</span></p>
                             <p>Doctor en Filosof&iacute;a y Ciencias de la Educaci&oacute;n. Ha ejercido como Maestro, Director Escolar, Profesor Titular de la Escuela Universitaria del Profesorado de la UB. Director adjunto del Instituto de Ciencias de la Educaci&oacute;n de la UB y actualmente es Catedr&aacute;tico de Universidad en la Facultad de Pedagog&iacute;a de la Universidad de Barcelona (Departamento de Did&aacute;ctica y Organizaci&oacute;n Educativa).</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/VpfftCZp1mY">
                             <h3>Carlos Magro Mazo</h3>
                             <p><span>Vicepresidente de la Asociaci&oacute;n Educaci&oacute;n Abierta y Director Acad&eacute;mico del Instituto Europeo de Dise&ntilde;o (IED).</span></p>
-                            <p>Especialista en innovaci&oacute;n educativa ha sido director de Innovaci&oacute;n de la Escuela de Organizaci&oacute;n Industrial (EOI), responsable del programa Ciencia y Sociedad de la Comunidad de Madrid, director de la Oficina de Informaci&oacute;n Cient&iacute;fica de la Fundaci&oacute;n mi+d en la Consejer&iacute;a de Educaci&oacute;n de la Comunidad de Madrid y responsable de la Feria Madrid es Ciencia y de la Semana de la Ciencia. Adem&aacute;s ha impartido clases relacionadas con la innovaci&oacute;n digital y educacional en el Instituto Nacional de Tecnolog&iacute;as Educativas y Formaci&oacute;n del profesorado (INTEF),  el Instituto Cervantes, la C&aacute;mara de Comercio de Madrid o Telef&oacute;nica Educaci&oacute;n, entre otras instituciones. Tambi&eacute;n ha participado en el Programa de Investigaci&oacute;n sobre Producci&oacute;n de Objetos Cient&iacute;ficos y Mundializaci&oacute;n de la Ciencia en el Centro de Estudios Hist&oacute;ricos del CSIC, realizando estancias de investigaci&oacute;n en las universidades de Harvard, Paris VII, Universidad Nacional de M&eacute;xico y en el CNRS. Actualmente compagina su trabajo como vicepresidente de la Asociaci&oacute;n Educaci&oacute;n Abierta con el puesto de director Acad&eacute;mico del Istituto Europeo di Design (IED Madrid).</p>
+                            <p>Especialista en innovaci&oacute;n educativa ha sido director de Innovaci&oacute;n de la Escuela de Organizaci&oacute;n Industrial (EOI), responsable del programa Ciencia y Sociedad de la Comunidad de Madrid, director de la Oficina de Informaci&oacute;n Cient&iacute;fica de la Fundaci&oacute;n mi+d en la Consejer&iacute;a de Educaci&oacute;n de la Comunidad de Madrid y responsable de la Feria Madrid es Ciencia y de la Semana de la Ciencia. Adem&aacute;s ha impartido clases relacionadas con la innovaci&oacute;n digital y educacional en el Instituto Nacional de Tecnolog&iacute;as Educativas y Formaci&oacute;n del profesorado (INTEF), el Instituto Cervantes, la C&aacute;mara de Comercio de Madrid o Telef&oacute;nica Educaci&oacute;n, entre otras instituciones. Tambi&eacute;n ha participado en el Programa de Investigaci&oacute;n sobre Producci&oacute;n de Objetos Cient&iacute;ficos y Mundializaci&oacute;n de la Ciencia en el Centro de Estudios Hist&oacute;ricos del CSIC, realizando estancias de investigaci&oacute;n en las universidades de Harvard, Paris VII, Universidad Nacional de M&eacute;xico y en el CNRS. Actualmente compagina su trabajo como vicepresidente de la Asociaci&oacute;n Educaci&oacute;n Abierta con el puesto de director Acad&eacute;mico del Istituto Europeo di Design (IED Madrid).</p>
                             <p>Desde 2008 a 2012 fue Director de Comunicaci&oacute;n y Marketing de EOI Escuela de Organizaci&oacute;n Industrial.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/K491Y2lreNc">
                             <h3>Celia D&iacute;az Arg&ntilde;ero</h3>
                             <p><span>Autora de los Programas de estudio para la asignatura de Lengua materna espa&ntilde;ol, de primaria y secundaria (Modelo Educativo 2017).</span></p>
                             <p>Investigadora Titular en el Centro de Ling&ntilde;&iacute;stica Hisp&aacute;nica del Instituto de Investigaciones Filol&oacute;gicas de la UNAM. Licenciada en psicolog&iacute;a educativa en la Universidad Aut&oacute;noma Metropolitana Unidad Xochimilco. Obtuvo una Maestr&iacute;a y un Doctorado en Ciencias con especialidad en Investigaci&oacute;n Educativa en el Departamento de Investigaciones Educativas (DIE) del Centro de Investigaci&oacute;n y Estudios Avanzados (CINVESTAV) del Instituto Polit&eacute;cnico Nacional. Es especialista en adquisici&oacute;n de la lengua escrita. Ha desempe&ntilde;ado labores docentes en distintos niveles educativos. Fue Directora del &Aacute;rea de Lengua y Comunicaci&oacute;n de la Subsecretar&iacute;a de Educaci&oacute;n B&aacute;sica. Es autora de diversos materiales did&aacute;cticos y programas educativos que han sido publicados por la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica.</p>
                             <p>Fue Directora Asociada de Lectura y Vida. Revista Latinoamericana de lectura que publica la Internacional Reading Association. Actualmente, es coordinadora del Programa de Maestr&iacute;a y Doctorado en Ling&ntilde;&iacute;stica de la UNAM.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/E-UgO7--2aA">
                             <h3>Silvia Conde Flores</h3>
                             <p><span>Consultora especialista en Formaci&oacute;n C&iacute;vica y &Eacute;tica (FCyE)</span></p>
                             <p>Maestra en Ciencias con Especialidad en Investigaciones Educativas por el Departamento de Investigaciones Educativas del Centro de Investigaci&oacute;n y Estudios Avanzados del Instituto Polit&eacute;cnico Nacional.</p>
@@ -562,38 +544,27 @@
                             <p>Actualmente es Directora General del Colectivo para el Desarrollo Educativo, Albanta y autora de libros de texto para Formaci&oacute;n C&iacute;vica y &Eacute;tica en primaria y en secundaria, publicados por Santillana y Ediciones Castillo, estos &uacute;ltimos autorizados por la SEP para su uso como libros de texto.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/ZdA_X6jlUuo">
                             <h3>Teresa Rojano Ceballos</h3>
                             <p><span>Especialista en matem&aacute;tica educativa.</span></p>
                             <p>Mar&iacute;a Teresa Rojano Ceballos, pionera del estudio de la matem&aacute;tica educativa en M&eacute;xico, recibi&oacute; el nombramiento de Investigador Em&eacute;rito del Centro de Investigaci&oacute;n y de Estudios Avanzados (Cinvestav), m&aacute;ximo reconocimiento que otorga la instituci&oacute;n a quienes han dedicado m&aacute;s de 30 a&ntilde;os al servicio del Centro.</p>
                             <p>La investigadora pertenece al Departamento de Matem&aacute;tica Educativa desde hace 37 a&ntilde;os, y desde hace dos ha estudiado las tecnolog&iacute;as digitales y la did&aacute;ctica de las y los docentes, para la implementaci&oacute;n de un nuevo modelo de ense&ntilde;anza de las matem&aacute;ticas en la escuela.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/azkYhVWY4aM">
                             <h3>Fernando Flores Camacho</h3>
                             <p><span>Especialista en ciencias naturales.</span></p>
                             <p>F&iacute;sico por la Facultad de Ciencias, UNAM. Maestr&iacute;a en Ense&ntilde;anza Superior por la Facultad de Filosof&iacute;a y Letras, UNAM. Doctorado en Pedagog&iacute;a, por la Facultad de Filosof&iacute;a y letras, UNAM. Trabaja desde hace m&aacute;s de veinte a&ntilde;os en el campo de la ense&ntilde;anza de la ciencia. Ha sido profesor de la Facultad de Ciencias en la carrera de F&iacute;sica.</p>
                             <p>Es profesor del posgrado en Pedagog&iacute;a de la Facultad de Filosof&iacute;a y Letras</p>
                             <p>Ha colaborado en diversos posgrados con otras instituciones como el Doctorado en Educaci&oacute;n de la UPN, el de la Universidad Aut&oacute;noma de Sinaloa y en la maestr&iacute;a y doctorado en F&iacute;sica Educativa del IPN.</p>
-                            <p>Ha participado en diversos programas nacionales con la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica como la nueva reforma de la secundaria (RIES), el PRONAP, y fungi&oacute; como coordinador acad&eacute;mico de ciencias naturales para Enciclomedia.  Fund&oacute; y coordin&oacute; el grupo de Ense&ntilde;anza Experimental de las Ciencias del CCADET. Ha constituido m&aacute;s de 6 grupos de investigaci&oacute;n en proyectos espec&iacute;ficos sobre la investigaci&oacute;n en la ense&ntilde;anza y el aprendizaje de la ciencia.</p>
-                            <p>Pertenece al Sistema Nacional de Investigadores (SNI), Nivel II, tiene el nivel D, el m&aacute;s alto, en el Programa de Primas al Desempe&ntilde;o del Personal Acad&eacute;mico PRIDE y participa en diversas asociaciones acad&eacute;micas como Consejo Mexicano de Investigaci&oacute;n Educativa, EARLI, Academia Mexicana de Profesores de Ciencias Naturales, entre otras y es miembro del Consejo Consultivo Interinstitucional de Ciencias que apoya a la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica.  Actualmente participa como responsable acad&eacute;mico del proyecto de transformaci&oacute;n de los laboratorios para el Bachillerato de la UNAM</p>
+                            <p>Ha participado en diversos programas nacionales con la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica como la nueva reforma de la secundaria (RIES), el PRONAP, y fungi&oacute; como coordinador acad&eacute;mico de ciencias naturales para Enciclomedia. Fund&oacute; y coordin&oacute; el grupo de Ense&ntilde;anza Experimental de las Ciencias del CCADET. Ha constituido m&aacute;s de 6 grupos de investigaci&oacute;n en proyectos espec&iacute;ficos sobre la investigaci&oacute;n en la ense&ntilde;anza y el aprendizaje de la ciencia.</p>
+                            <p>Pertenece al Sistema Nacional de Investigadores (SNI), Nivel II, tiene el nivel D, el m&aacute;s alto, en el Programa de Primas al Desempe&ntilde;o del Personal Acad&eacute;mico PRIDE y participa en diversas asociaciones acad&eacute;micas como Consejo Mexicano de Investigaci&oacute;n Educativa, EARLI, Academia Mexicana de Profesores de Ciencias Naturales, entre otras y es miembro del Consejo Consultivo Interinstitucional de Ciencias que apoya a la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica. Actualmente participa como responsable acad&eacute;mico del proyecto de transformaci&oacute;n de los laboratorios para el Bachillerato de la UNAM</p>
                         </div>
-                        <!--<div id="" class="ponenteBiografia">
-                            <h3>Pablo Escalante Gonzalbo</h3>
-                            <p>Doctor en Historia por la Facultad de Filosof&iacute;a y Letras, investigador del Instituto de Investigaciones Est&eacute;ticas desde 1990.</p>
-                            <p>Director del Seminario de Historia del Arte del Centro de Investigaci&oacute;n y Docencia en Humanidades del Estado de Morelos (CIDHEM); miembro del SNI del CONACYT y del Comit&eacute; Mexicano de Historia del Arte, correspondiente del Comit&eacute; Internacional de Historia del Arte. Ha escrito numerosos libros para j&oacute;venes con una orientaci&oacute;n did&aacute;ctica, para uso escolar, y libros de ficci&oacute;n hist&oacute;rica.</p>
-                            <p>Ha sido colaborador en los diarios mexicanos Milenio, La Cr&oacute;nica, La Raz&oacute;n, as&iacute; como en las revistas Nexos y Vuelta, Condujo varios programas de televisi&oacute;n en el Canal 11 de M&eacute;xico.</p>
-                            <p>Actualmente es investigador en el Instituto de Investigaciones Est&eacute;ticas de la UNAM y profesor en la FFyL.</p>
-                        </div>-->
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/AbrwD3VIF54">
                             <h3>Emiliana Rodr&iacute;guez Morales</h3>
                             <p><span>Especialista en educaci&oacute;n socioemocional.</span></p>
-                            <p>Estudi&oacute; una maestr&iacute;a en Mente, Cerebro y Educaci&oacute;n en la Universidad de Harvard y una licenciatura en F&iacute;sica en la UNAM. Ha colaborado en investigaciones en la Universidad de Wisconsin, Universidad de Maryland,la Facultad de Psicolog&iacute;a de la UNAM, el proyecto Research Schools de Harvard y el Mind and Life Institute.  Ha estudiado la filosof&iacute;a y pr&aacute;ctica del budismo tibetano en Casa Tibet  M&eacute;xico por m&aacute;s de 13 a&ntilde;os y ha tenido  la oportunidad de recibir ense&ntilde;anzas de SS Dalai Lama, Mingyur Rinpoch&eacute;, Gueshe Lhundup S&ouml;pa, Khandro Rinpoch&eacute;, Dzigar Kongtrul Rinpoch&eacute;, Tsoknyi Rinpoch&eacute; y Alan Wallace entre otros, y de hacer algunos retiros prolongados.</p>
+                            <p>Estudi&oacute; una maestr&iacute;a en Mente, Cerebro y Educaci&oacute;n en la Universidad de Harvard y una licenciatura en F&iacute;sica en la UNAM. Ha colaborado en investigaciones en la Universidad de Wisconsin, Universidad de Maryland,la Facultad de Psicolog&iacute;a de la UNAM, el proyecto Research Schools de Harvard y el Mind and Life Institute. Ha estudiado la filosof&iacute;a y pr&aacute;ctica del budismo tibetano en Casa Tibet M&eacute;xico por m&aacute;s de 13 a&ntilde;os y ha tenido la oportunidad de recibir ense&ntilde;anzas de SS Dalai Lama, Mingyur Rinpoch&eacute;, Gueshe Lhundup S&ouml;pa, Khandro Rinpoch&eacute;, Dzigar Kongtrul Rinpoch&eacute;, Tsoknyi Rinpoch&eacute; y Alan Wallace entre otros, y de hacer algunos retiros prolongados.</p>
                             <p>Actualmente es instructora en Casa T&iacute;bet M&eacute;xico y directora de investigaci&oacute;n en AtentaMente Consultores donde su trabajo se enfoca en el desarrollo de programas educativos, y en la vinculaci&oacute;n entre la investigaci&oacute;n cient&iacute;fica y la pr&aacute;ctica pedag&oacute;gica sobre competencias sociales y emocionales, y el entrenamiento mental.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/YskRAgtwJYw">
                             <h3>Juan Manuel Mart&iacute;nez Garc&iacute;a</h3>
                             <p><span>Coordinador de los Programas de estudio del componente de Autonom&iacute;a curricular.</span></p>
                             <p>Profesor de primaria egresado de la normal rural de Juan Guadalupe Aguilera en Durango pasando por una licenciatura en psicolog&iacute;a por la Universidad Aut&oacute;noma de Noreste en Coahuila, luego por la ingenier&iacute;a industrial por la Universidad Aut&oacute;noma de Nuevo Le&oacute;n, lo mismo en posgrados en materia de psicolog&iacute;a y educaci&oacute;n, terminando con un doctorado en estad&iacute;stica aplicada a fen&oacute;menos sociales realizado en la Universidad Imperial de Kyushu en Fukuoka, Jap&oacute;n.</p>
@@ -602,7 +573,6 @@
                             <p>Actualmente comparte el encargo del dise&ntilde;o, desarrollo e implementaci&oacute;n del Programa Nacional de ingl&eacute;s y de la puesta en marcha de la fase cero del componente de Autonom&iacute;a Curricular que est&aacute; dentro y forma parte del Modelo Educativo.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/l7PZKnb_pyY">
                             <h3>Jos&eacute; Enrique Villa Rivera</h3>
                             <p><span>Secretario de Educaci&oacute;n P&uacute;blica y Cultura del Estado de Sinaloa.</span></p>
                             <p>Ingeniero mexicano, director general del Instituto Polit&eacute;cnico Nacional de 2003 a 2009, del Instituto Mexicano del Petr&oacute;leo y del Consejo Nacional de Ciencia y Tecnolog&iacute;a(CONACyT) de 2011 a 2013.</p>
@@ -612,7 +582,6 @@
                             <p>En 2017, el gobernador Quirino Ordaz lo nombra Secretario de Educaci&oacute;n P&uacute;blica y Cultura del Estado de Sinaloa.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/nGmXIgNz6s8">
                             <h3>Agustina Blanco</h3>
                             <p><span>Directora de la Red de Escuelas de Aprendizaje de la Direcci&oacute;n General de Cultura y Educaci&oacute;n Bonaerense.</span></p>
                             <p>Lic. en Administraci&oacute;n de Empresas, UCA, Argentina, Magister en Educaci&oacute;n, Manhattanville College, NY, y Magister en Relaciones Internacionales, Universidad de New York, E.E.U.U. Co-autora del libro La Escuela Protagonista, Temas, 1999. Se desempe&ntilde;&oacute; como docente de Ciencias Sociales del nivel secundario y terciario en Estados Unidos.</p>
@@ -620,7 +589,6 @@
                             <p>Es miembro del consejo de la organizaci&oacute;n Ense&ntilde;a por Argentina, y miembro del consejo asesor de la Fundaci&oacute;n C&oacute;rdoba Mejora. Colabora como consultora de la empresa de tecnolog&iacute;a educativa Educatina.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/D9NQZctES70">
                             <h3>Patricia V&aacute;zquez del Mercado</h3>
                             <p><span>Secretaria de Educaci&oacute;n P&uacute;blica del Estado de Puebla.</span></p>
                             <p>Maestra en Pol&iacute;ticas P&uacute;blicas Comparadas por la Facultad Latinoamericana de Ciencias Sociales, y Licenciada en Pedagog&iacute;a por la Universidad Panamericana. Fue Directora General de Proyectos Especiales. Subsecretaria de Educaci&oacute;n Media Superior y actual Secretaria de Educaci&oacute;n P&uacute;blica del Estado de Puebla.</p>
@@ -629,24 +597,46 @@
                             <p>Ha sido consultora educativa en el Centro de Investigaci&oacute;n y de Estudios Avanzados del Instituto Polit&eacute;cnico Nacional (CINVESTAV); InWent Capacity Building International (Internationale Weiterbildung und Entwicklung, actualmente GIZ); en el Centro de Investigaci&oacute;n en Geograf&iacute;a y Geom&aacute;tica “Ing. Jorge L. Tamayo” A.C.; as&iacute; como en la Universidad Panamericana.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <embed class='youtubeEmbed' width="420" height="315" src="https://www.youtube.com/v/bBhlyTAkLqM">
                             <h3>Eduardo Backhoff Escudero</h3>
                             <p><span>Consejero Presidente del INEE</span></p>
                             <p>Licenciado en Psicolog&iacute;a y Doctor en Educaci&oacute;n e investigador nivel tres del Sistema Nacional de Investigadores. Es reconocido por sus aportaciones al campo de las evaluaciones a gran escala. Su l&iacute;nea de investigaci&oacute;n se ha centrado en torno al dise&ntilde;o y validaci&oacute;n de pruebas psicol&oacute;gicas y educativas, as&iacute; como en mecanismos para administrar estos ex&aacute;menes por medios digitales. Ha desarrollado evaluaciones para diagnosticar problemas de aprendizaje en escolares de educaci&oacute;n b&aacute;sica y para seleccionar a estudiantes de los niveles de educaci&oacute;n media superior y superior.</p>
                             <p>Es autor y coautor de cerca de 85 art&iacute;culos cient&iacute;ficos, 120 art&iacute;culos de divulgaci&oacute;n, 30 cap&iacute;tulos y 25 libros en el &aacute;mbito educativo, as&iacute; como de 30 manuales t&eacute;cnicos. Ha participado en m&aacute;s de 170 congresos nacionales y 55 internacionales. En mayo de 2013 fue nombrado por el Senado de la Rep&uacute;blica consejero de la Junta de Gobierno del INEE; en abril de 2017</p>
                             <p>Fue designado consejero presidente de la Junta de Gobierno del Instituto Nacional para la Evaluaci&oacute;n de la Educaci&oacute;n (INEE) asumiendo funciones a partir del 1° de mayo de mismo a&ntilde;o.</p>
                         </div>
-                        <div id="" class="ponenteBiografia">
-                            
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="footer" class="whiteBg">
-            <div> <img src="resources/img/footer-01.svg" onclick="oei()"> <img src="resources/img/footer-02.svg" onclick="fundacion()"> <img src="resources/img/footer-03.svg" onclick="sep()"> </div>
-        </div> <img id="scrollButton" class="" onclick="scrollBottom()" src="resources/img/down.png"> <img id="ant" class="horizontalNav" src="resources/img/back.png"> <img id="sig" class="horizontalNav" src="resources/img/next.png"> </div>
+        </div> 
+        <img id="scrollButton" class="" onclick="scrollBottom()" src="resources/img/down.png"> 
+        <img id="ant" class="horizontalNav" src="resources/img/back.png"> 
+        <img id="sig" class="horizontalNav" src="resources/img/next.png"> 
+    </div>
     <div id="start" onclick="activate()"></div>
+     <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '350'
+                , width: '600'
+                , videoId: 'nHslEdP6y8s',
+            });
+        }
+        // 4. The API will call this function when the video player is ready.
+        /*function onPlayerReady(event) {
+            event.target.playVideo();
+        }*/
+        function stopYTVideo() {
+            player.stopVideo();
+        }
+    </script>
     <script type="text/javascript" src="resources/js/main.js"></script>
     <script type="text/javascript" src="resources/js/modalWindow.js"></script>
 </body>
