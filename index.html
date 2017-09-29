@@ -17,7 +17,7 @@
             <div>
                 <div class="blackBg"> <img id="headerLogo" onclick="home()" src="resources/img/mainlogo_header.svg" height="120"> </div>
                 <div class="menu_btns">
-                    <div class="navButton" onclick="fundacion()">Fundaci&oacute;n Santillana</div>
+                    <div class="navButton" style="width: 0;"></div>
                     <div class="navButton" onclick="goTo(slides,1)">Presentaci&oacute;n</div>
                     <div class="navButton" onclick="goTo(slides,2)">Objetivo General</div>
                     <div class="navButton" onclick="goTo(slides,3)">Agenda</div>
@@ -28,7 +28,9 @@
             </div>
         </div>
         <div id="body" class="">
-            <section id="portada" class="blackBg no-overflow"> <img id="portadaImg" style="" src="resources/img/mainlogo_main-01.svg"> </section>
+            <section id="portada" class="blackBg no-overflow"> 
+                <img id="portadaImg" style="" src="resources/img/mainlogo_main-01.svg"> 
+            </section>
             <section id="presentacion">
                 <div class="slideWrapper floatLayout">
                     <div class="capitalLeter"> <img src="resources/img/d.svg"> </div>
@@ -340,15 +342,23 @@
                     </div>
                     <img id="fotoSedeDisplay" class="fotoSede1" src="resources/img/JTB0.jpg">
                     <div class="fotoSedeWrapper">
-                        <img class="fotoSede selected" onclick="fotosede(0)" src="resources/img/JTB0.JPG">
-                        <img class="fotoSede" onclick="fotosede(1)" src="resources/img/JTB1.JPG">
-                        <img class="fotoSede" onclick="fotosede(2)" src="resources/img/JTB2.JPG">
+                        <img class="fotoSede selected" onclick="fotosede(0)" src="resources/img/JTB0.jpg">
+                        <img class="fotoSede" onclick="fotosede(1)" src="resources/img/JTB1.jpg">
+                        <img class="fotoSede" onclick="fotosede(2)" src="resources/img/JTB2.jpg">
                     </div>
-                
+                    <div class="agendaSede">
+                        <p>Indicaciones para el estacionamiento:</p>
+                        <p>Av. Paseo de la Reforma y Calzada Gandhi s/n Col. Chapultepec Polanco. Del. Miguel Hidalgo. C.P. 11560, M&eacute;xico, D.F.</p>
+                        <p>Si vienes por Paseo de la Reforma deber&aacute;s ingresar por Av. Grutas y tomar el desnivel que est&aacute; pasando la estatua de Tl&aacute;loc o bien puedes ingresar por Calz. Mahatma Gandhi (con direcci&oacute;n a Paseo de la Reforma) y seguir el circuito hasta llegar a la estatua de Mahatma Gandhi y a 200 metros encontraras la entrada del estacionamiento.</p>
+                        <p>Costo $20.00 MX pesos por hora.</p>
+                    </div>
+                    <div class="agendaSede">
+                        
+                    </div>
                 </div>
             </section>
             <section id="organizadores" class="blackBg">
-                <div class="slideWrapper" style="height:100%;">
+                <div class="slideWrapper" style="height: auto;">
                     <table>
                         <tr>
                             <td><img class="title" src="resources/img/sede.svg"></td>
@@ -374,6 +384,12 @@
                             <td colspan="3"><p class="">Haz clic en los iconos para conocer m&aacute;s informaci&oacute;n acerca de los organizadores y organismos internacionales participantes</p></td>
                         </tr>
                     </table>
+                </div>
+                <div class="agendaSede">
+                        
+                </div>
+                <div class="agendaSede">
+
                 </div>
             </section>
         </div>

@@ -26,7 +26,7 @@ section{
     top: 0;
     height: 100%;
     width: 100%;
-    padding: 2% 1%;
+    padding: 2% 1% 100px 1%;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -105,16 +105,14 @@ h6 span{
     display: block;
     font-size: 80%;
 }
-#mainWrapper{
-    position: relative;
-    cursor: pointer;
-}
 #mainWrapper.active{
     cursor: auto;
 }
 #mainWrapper{
+    position: relative;
     width:  100%;
     height: 100%;
+    cursor: pointer;
 }
 #header{
     z-index: 1;
@@ -176,8 +174,8 @@ h6 span{
     z-index: 0;
 }
 #footer{
-    height: 8%;
-    max-height: 8%;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     z-index: 100;
     -webkit-box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
@@ -225,6 +223,15 @@ h6 span{
 }
 .active #header>div>div .navButton:first-child{
     border-left: none;
+    display: none;
+    padding: 0 !important;
+    width:   0 !important;
+    opacity: 0 !important;
+    height:  0 !important;
+    margin:  0 !important;
+}
+.active #header>div>div .navButton:nth-child(2){
+    border-left: none;
 }
 .active #header>div>div .navButton{
     float: left;
@@ -247,7 +254,7 @@ h6 span{
 
 #portadaImg{
     display: block;
-    
+    max-height: 100%;
     margin: 0 auto;
     -o-object-position: 50% 50%;
     object-position: 50% 50%;
@@ -677,9 +684,7 @@ ul.sub li{
     -moz-   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
 }
-#organizadores .slideWrapper{
-    max-height: 80%;
-}
+
 #organizadores .table{
     position: absolute;
     right: 0;
@@ -743,12 +748,12 @@ ul.sub li{
     margin: 0 auto;
 }
 #organizadores .logo{
-    width: 80%;
+    width: 78%;
     cursor: pointer;
     margin: 25px auto;
 }
 #organizadores .logo:hover{
-    width: 90%;
+    width: 85%;
 }
 #organizadores .animate{
     width: 90%;
@@ -780,9 +785,11 @@ ul.sub li{
     min-height: 350px;
 }
 .fotoSedeWrapper{
+    display: block;
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 5;
 }
 .fotoSede1{
     width: 100%;
@@ -802,4 +809,15 @@ ul.sub li{
 }
 .fotoSedeWrapper .selected{
     opacity: 0.5;
+}
+
+.agendaSede{
+    position: relative;
+    top: 20px;
+    height: auto;
+    min-height: 20px;
+    z-index: 1;
+}
+.agendaSede p{
+    line-height: normal;
 }

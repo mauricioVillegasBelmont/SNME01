@@ -18,7 +18,6 @@ function setAgendaPictures(){
     var agedaPic = document.getElementsByClassName('agedaPic');
     var responsivePictures = ['responsive_agenda-25M.svg','responsive_agenda-26M.svg','responsive_agenda-26V.svg'];
     var nonResponsivePictures = ['agenda-25M.svg','agenda-26M.svg','agenda-26V.svg'];
-    console.log(agedaPic.length);
     if(windowWidth <= 1024){
         for(var i = 0;i <= agedaPic.length-1; i++){
             agedaPic[i].src = 'resources/img/'+responsivePictures[i];
@@ -187,27 +186,7 @@ function prev(trigger,elem,index){
     
 }
 function goTo(elem,index){
-    for(var i = index-1;i>=0;i--){
-        if(elem[i].classList.contains('current')){
-            elem[i].classList.remove('current');
-        }
-        if(elem[i].classList.contains('next')){
-            elem[i].classList.remove('next');
-        }
-        elem[i].classList.add('prev');
-    }
-    elem[index].classList.remove('prev','next');
-    elem[index].classList.add('current');
-    for(var i = index+1;i <= elem.length-1;i++){
-        if(elem[i].classList.contains('current')){
-            elem[i].classList.remove('current');
-        }
-        if(elem[i].classList.contains('prev')){
-            elem[i].classList.remove('prev');
-        }
-        elem[i].classList.add('next');
-    }
-    
+    setCurrent(elem,index);
     if(index <= 1){
         ant.classList.add('disabled');
     }else if(ant.classList.contains('disabled')){
@@ -218,9 +197,9 @@ function goTo(elem,index){
     }else if(sig.classList.contains('disabled')){
         sig.classList.remove('disabled');
     }
-    slideIndex = index;
-    pageIndex();
-    currentButton(index);
+    //slideIndex = index;
+    //pageIndex();
+    //currentButton(index);
 }
 
 function horizontalNav(trigger,inc){
@@ -294,11 +273,10 @@ function checkScroll(){
 function scrollBottom(){
     var thisPage = document.querySelector("section.current");
     thisPage.scrollTop = thisPage.scrollHeight;
-
 }
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
-var fotoSedeElements =['JTB0.JPG','JTB1.JPG','JTB2.JPG'];
+var fotoSedeElements =['JTB0.jpg','JTB1.jpg','JTB2.jpg'];
 
 function fotosede(pic){
     var fotoSedeDisplay = document.getElementById('fotoSedeDisplay');
