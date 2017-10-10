@@ -775,6 +775,10 @@ ul.sub li{
 .sede img{
     max-width: 100%;
 }
+.cl{
+    color: #B9007C;
+    text-align: center;
+}
 .youtubeEmbed{
     margin: 0 auto 25px auto;
     float: none;
@@ -800,6 +804,7 @@ ul.sub li{
     float: left;
     margin-top: 20px;
     opacity: 1;
+    cursor: pointer;
 }
 .fotoSede:first-child,.fotoSede:nth-child(2){
     margin-right: 30px;
