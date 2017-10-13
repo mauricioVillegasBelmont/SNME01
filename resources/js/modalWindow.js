@@ -14,8 +14,9 @@ var ponentePvid=[
  'nHslEdP6y8s' //AURELIO NUÑO
 ,'UQa-jhO7Hhw' //JAVIER TREVIÑO
 ,'2yM0w7gDo58' //OTTO GRANADOS
-,'Ne9bdM3ZYQk' //MARCIAL HELLIN
-,'kq48G7tYjgQ' //VALENTINA QUIROGA
+,'D9NQZctES70' //PATRICIA VASQUEZ
+,''//María del Pilar González García//'kq48G7tYjgQ' //VALENTINA QUIROGA
+,'bBhlyTAkLqM' //EDUARDO BACKHOFF
 ,'te5ACbZFLHo' //ELIZA BONILLA
 ,'lscCHYpmUws' //CARLOS MANCERA 
 ,'62UiI-hAfFA' //GABRIELA RAMOS
@@ -33,10 +34,9 @@ var ponentePvid=[
 ,'azkYhVWY4aM' //FERNANDO FLORES
 ,'AbrwD3VIF54' //EMILIAN RODRIGUEZ
 ,'YskRAgtwJYw' //JUAN MANUEL MARTINEZ
-,'l7PZKnb_pyY' //JOSE ENRIQUE VILLA
+,'x0ta_QMIz6o'//Francisco Miranda López//'l7PZKnb_pyY' //JOSE ENRIQUE VILLA
 ,'nGmXIgNz6s8' //AGUSTINA BLANCO
-,'D9NQZctES70' //PATRICIA VASQUEZ
-,'bBhlyTAkLqM' //EDUARDO BACKHOFF
+,'TvywOzyS5d8' //Mónica Ramírez Peñuela
 ];
 
 // When the user clicks on <span> (x), close the modal
@@ -47,19 +47,27 @@ closeModal.onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
         player.stopVideo();
+        modal.style.display = "none";
     }
 }
 
 function setModal(img, index){
+	var playertag =document.getElementById('player');
     modal.style.display = "block";
     CurrentPonentePic.src = "resources/img/"+img+".png";
     var ponenteBiografia = document.getElementsByClassName('ponenteBiografia');
-    console.log(ponentePvid[index]);
-    player.loadVideoById({'videoId': ponentePvid[index],
-               'startSeconds': 0,
-               'suggestedQuality': 'large'});
+    /*console.log(ponentePvid[index]);*/
+	if(index != 4){
+		playertag.setAttribute('style','display:block;');
+		player.loadVideoById({'videoId': ponentePvid[index],
+				   'startSeconds': 0,
+				   'suggestedQuality': 'large'});
+		
+	}else{
+		player.stopVideo();
+		playertag.setAttribute('style','display:none;');
+	}
     
     for(var i=0; i <= ponenteBiografia.length-1; i++){
         if(ponenteBiografia[i].style.display != "none"){
@@ -73,8 +81,11 @@ function setModal(img, index){
 // When the user clicks the button, open the modal 
 for (var i = 0;i <= ponente.length-1;i++){
     (function () {
+		
         var index = i;
         var pic = ponentePic[i];
         ponente[i].addEventListener('click', function() { setModal(pic, index); }, false);
+		var ponenteImg = document.getElementsByClassName('railPonetePic');
+		ponenteImg[i].src = "resources/img/"+ponentePic[i]+'.png';
     }());
 }

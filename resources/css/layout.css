@@ -250,7 +250,9 @@
         font-family: 'body';
         font-size: 1em;
     }
-
+	p.note{
+		font-size: 80%;
+	}
     p .boldItalic, li .boldItalic{
         font-family: 'body';
         font-size: 1em;
