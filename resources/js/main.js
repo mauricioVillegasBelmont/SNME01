@@ -5,6 +5,7 @@ var sig  = document.getElementById('sig');
 var slideIndex = 0;
 var scrollButton = document.getElementById('scrollButton');
 var navButton = document.getElementsByClassName('navButton');
+var currentSlide = 0;
 var scrollInterval = function(){ 
     document.body.scrollTop = document.body.scrollHeight;
 };
@@ -14,7 +15,7 @@ var organizadoresAnimate = document.querySelectorAll('#organizadores img.animate
 
 function setAgendaPictures(){
     var windowWidth = window.innerWidth;
-    var sedeHeaderIMG = document.getElementById('sedeHeaderIMG');
+    //var sedeHeaderIMG = document.getElementById('sedeHeaderIMG');
     var agedaPic = document.getElementsByClassName('agedaPic');
     var responsivePictures = ['responsive_agenda-25M.svg','responsive_agenda-26M.svg','responsive_agenda-26V.svg'];
     var nonResponsivePictures = ['agenda-25M.svg','agenda-26M.svg','agenda-26V.svg'];
@@ -23,13 +24,13 @@ function setAgendaPictures(){
             agedaPic[i].src = 'resources/img/'+responsivePictures[i];
             //console.log('agedaPic: res' + agedaPic[i]);
         }
-        sedeHeaderIMG.src = 'resources/img/responsive_sedeHeader.png';
+        //sedeHeaderIMG.src = 'resources/img/responsive_sedeHeader.png';
     }else{
         for(var i = 0;i <= agedaPic.length-1; i++){
             agedaPic[i].src = 'resources/img/'+nonResponsivePictures[i];
             //console.log('agedaPic nonR: ' + agedaPic[i]);
         }
-        sedeHeaderIMG.src = 'resources/img/sedeHeader.png';
+        //sedeHeaderIMG.src = 'resources/img/sedeHeader.png';
     }
 }
 
@@ -143,7 +144,14 @@ function currentButton(index){
 }
 
 function setCurrent(elem,index){
+	
+	if(currentSlide == 2 && index != 2){
+	   ponenciasActive();
+	}
+	
     slideIndex = index;
+	currentSlide = index;
+	//ponenciasActive(index);
     for(var i = index-1;i>=0;i--){
         if(elem[i].classList.contains('current')){
             elem[i].classList.remove('current');
@@ -168,6 +176,7 @@ function setCurrent(elem,index){
     currentButton(index)
     pageIndex();
     agendaIndex();
+	//ponenciasActive(index);
 }
 
 function activate(e){

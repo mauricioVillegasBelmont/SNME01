@@ -47,13 +47,13 @@ closeModal.onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        player.stopVideo();
+        speakerPlayer.stopVideo();
         modal.style.display = "none";
     }
 }
 
 function setModal(img, index){
-	var playertag =document.getElementById('player');
+	var playertag =document.getElementById('speakerPlayer');
     modal.style.display = "block";
     CurrentPonentePic.src = "resources/img/"+img+".png";
     var ponenteBiografia = document.getElementsByClassName('ponenteBiografia');
@@ -65,7 +65,7 @@ function setModal(img, index){
 				   'suggestedQuality': 'large'});
 		
 	}else{
-		player.stopVideo();
+		speakerPlayer.stopVideo();
 		playertag.setAttribute('style','display:none;');
 	}
     
@@ -88,4 +88,12 @@ for (var i = 0;i <= ponente.length-1;i++){
 		var ponenteImg = document.getElementsByClassName('railPonetePic');
 		ponenteImg[i].src = "resources/img/"+ponentePic[i]+'.png';
     }());
+}
+
+
+function ponenciaVid(i){
+	ponencias.playVideoAt(i);
+}
+function ponenciasActive(){
+	ponencias.stopVideo();
 }

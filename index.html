@@ -19,11 +19,10 @@
                 <div class="menu_btns">
                     <div class="navButton" style="width: 0;"></div>
                     <div class="navButton" onclick="goTo(slides,1)">Presentaci&oacute;n</div>
-                    <div class="navButton" onclick="goTo(slides,2)">Objetivo General</div>
+                    <div class="navButton" onclick="goTo(slides,2)">Videoponecias</div>
                     <div class="navButton" onclick="goTo(slides,3)">Agenda</div>
                     <div class="navButton" onclick="goTo(slides,4)">Ponentes</div>
-                    <div class="navButton" onclick="goTo(slides,5)">Sede</div>
-                    <div class="navButton" onclick="goTo(slides,6)">Organizadores</div>
+                    <div class="navButton" onclick="goTo(slides,5)">Organizadores</div>
                 </div>
             </div>
         </div>
@@ -37,21 +36,96 @@
                     <div class="bodyText">
                         <p>esde su creaci&oacute;n en 1979, la Fundaci&oacute;n Santillana ha tenido como principal objetivo contribuir a la extensi&oacute;n y mejora de la educaci&oacute;n en Iberoam&eacute;rica y Espa&ntilde;a, objetivo que ha podido cumplir gracias a las alianzas y colaboraciones que ha mantenido con las administraciones educativas de la regi&oacute;n, con organizaciones internacionales, universidades, expertos, investigadores y docentes.</p>
                         <p>En el desarrollo de su actividad ha promovido la realizaci&oacute;n de investigaciones, informes, diferentes tipos de publicaciones, identificaci&oacute;n y difusi&oacute;n de experiencias de &eacute;xito y debates como el que nos ocupa en este simposio.</p>
-                        <p>En esta ocasi&oacute;n, Fundaci&oacute;n Santillana ha convocado a especialistas de reconocidos organismos nacionales e internacionales para reflexionar en torno a grandes temas de la actual Reforma Educativa en M&eacute;xico mediante la realizaci&oacute;n del simposio <span class="boldItalic">Modelo educativo 2017. Hacer posible la reforma curricular: Liderazgo, Gesti&oacute;n escolar .</span> Durante dos d&iacute;as se escuchar&aacute; la voz de autoridades educativas, investigadores y especialistas que, de diversa manera, han colaborado en la construcci&oacute;n del modelo educativo definido en 2017.</p>
+                        <p>En esta ocasi&oacute;n, Fundaci&oacute;n Santillana ha convocado a especialistas de reconocidos organismos nacionales e internacionales para reflexionar en torno a grandes temas de la actual Reforma Educativa en M&eacute;xico mediante la realizaci&oacute;n del simposio <span class="boldItalic">Modelo educativo 2017. Hacer posible la reforma curricular: Liderazgo, Gesti&oacute;n escolar y Gobernanza.</span> Durante dos d&iacute;as se escuchar&aacute; la voz de autoridades educativas, investigadores y especialistas que, de diversa manera, han colaborado en la construcci&oacute;n del modelo educativo definido en 2017.</p>
                         <p>Porque toda Reforma Educativa necesita el consenso de un gran acuerdo nacional, Fundaci&oacute;n Santillana abre el espacio para el an&aacute;lisis y el debate constructivos.</p>
                     </div>
                     <div class="bullet"> <img class="w100" src="resources/img/bullet01.svg"> </div>
                 </div>
-            </section>
-            <section id="objetivo" class="">
-                <div class="slideWrapper floatLayout">
+                <br style="clear: both;" />
+				<div class="slideWrapper floatLayout">
+                	<hr>
+				</div>
+                <br style="clear: both;" />
+				<div class="slideWrapper floatLayout">
                     <div class="capitalLeter"> <img src="resources/img/s.svg"> </div>
                     <div class="bodyText">
                         <p>in duda, una de las etapas m&aacute;s esperadas de la Reforma Educativa en curso es la relativa al nuevo modelo educativo que se impulsar&aacute; para afrontar los grandes temas de la agenda educativa nacional. La Secretar&iacute;a de Educaci&oacute;n P&uacute;blica de nuestro pa&iacute;s ha concluido una serie de etapas clave para la definici&oacute;n de los cinco ejes que conforman al nuevo modelo educativo: <i>Planteamiento curricular; La Escuela al Centro del Sistema Educativo; Formaci&oacute;n y desarrollo profesional docente; Inclusi&oacute;n y equidad; y La Gobernanza del Sistema Educativo.</i></p>
                         <p>Con la intenci&oacute;n de coadyuvar con la SEP en el an&aacute;lisis de diversos temas relativos a lograr la mejor implementaci&oacute;n del nuevo modelo educativo, <b>Fundaci&oacute;n Santillana y la Organizaci&oacute;n de Estados Iberoamericanos (OEI) han convocado a organismos de reconocido prestigio internacional para incorporarse como coorganizadores de este simposio y enriquecer con su participaci&oacute;n y experiencia las reflexiones que se desarrollen durante el mismo.</b> Con la intenci&oacute;n de poner foco en el an&aacute;lisis y evitar la dispersi&oacute;n, hemos seleccionado tres grandes temas que guiar&aacute;n nuestros trabajos durante las dos jornadas: Reforma curricular, Liderazgo, Gesti&oacute;n escolar y Gobernanza. Los cuatro grandes temas hacen clara referencia a aspectos medulares del modelo educativo recientemente dado a conocer por la SEP y, con toda seguridad, nos permitir&aacute;n seguir avanzando para consolidar la adecuada implementaci&oacute;n del modelo educativo durante el ciclo escolar 2018-2019.</p>
                     </div>
                     <div class="bullet"> <img src="resources/img/bullet02.svg"> </div>
-                </div>
+				</div>
+            </section>
+            <section id="videoponencias">
+            	<div class="slideWrapper floatLayout">
+            		<div id="videoWrapper" class="">
+            			<div id="ponencias"></div>
+            		</div>
+            		<div id="videolistWrapper" class="w-30">
+            			<!--<div id="videolistHeader">
+            				<img src="resources/img/click-videos.png">
+            			</div>-->
+            			<div class="videolistSeparator" style="margin-top: 50px;">
+            				<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(0)">
+            					intro
+            				</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(1)">
+            					Mensaje inaugural <span>Otto Granados Roldán, Subsecretario de Planeación, Evaluación y Coordinación SEP México.</span>
+
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(2)">
+            					Apertura <span>Juan Arzoz Arbide, Director de la Fundación Santillana en México.</span>
+
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(3)">
+								Visión de la Reforma Educativa: logros por cimentar y retos para el futuro cercano<span>Gabriela Ramos, Directora y Sherpa de la OCDE.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(4)">
+							Visión desde la UNESCO <span>Pablo Cevallos Estarellas, Director de la Oficina para América Latina del IIPE — UNESCO.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(5)">
+							Visión desde la OEI <span>Arturo Velázquez Jiménez, Director de la OEI México.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(6)">
+							Documento del simposio <span>Presentación por Lorenzo Gómez- Morin, Profesor-investigador de FLACSO.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(7)">
+							Liderazgo escolar Conferencia magistral <span>por Ricardo Cuenca Pareja, Director del Instituto de Estudios Peruanos.</span>
+							</button>
+            				<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(8)">
+            				Un nuevo modelo educativo para el nuevo país que queremos seguir construyendo <span>Conferencia magistral por Javier Treviño Cantú, Subsecretario de Educación Básica, SEP México.</span>
+							</button>
+            			</div>
+            			<div class="videolistSeparator">
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(9)">
+							Apertura <span>Bienvenida y explicación de la jornada por Mariano Jabonero Blanco, Director Global de Educación de la Fundación Santillana.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(10)">
+							Gestión escolar <span>Conferencia magistral por Serafín Antúnez Marcos, Catedrático de la Facultad de Pedagogía de la Universidad de Barcelona (UB).</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(11)">
+							Mesa de diálogo: <span>Visión Iberoamericana.</span>
+							<span>Mónica Ramírez Peñuela, Directora de Calidad de Preescolar, Básica y Media en el Ministerio de Educación de Colombia; María del Pilar González García, Directora General de Innovación y Equidad Educativa, Consejería de Educación de la Junta de Castilla y León de España; Pablo Cevallos Estarellas, IIEPE — UNESCO; y Francisco Miranda López, Titular de la Unidad de Normatividad y Política Educativa en el INEE.</span>
+							</button>
+            			</div>
+            			<div class="videolistSeparator">
+            				<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(12)">
+            				Reforma curricular <span>Conferencia magistral sobre Reforma curricular por Carlos Magro Mazo, Vicepresidente de la Asociación Educación Abierta y Director Académico del Instituto Europeo de Diseño (IED).</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(13)">
+							Mesa de diálogo: <span>Voz, visión y retos de implementación.</span><span>Celia Díaz Argüero (Español), Silvia Conde Flores (Formación cívica y ética), Teresa Rojano Ceballos (Matemáticas), Fernando Flores Camacho (Ciencias naturales y tecnología), Emiliana Rodríguez Morales (Educación socioemocional) y Juan Manuel Martínez García (Autonomía curricular). Moderadora: Elisa Bonilla Rius, Directora General de Desarrollo Curricular de la SEB – SEP.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(14)">
+							Mesa de diálogo: <span>Gobernanza del sistema educativo.</span> <span>Tiempo de coincidencias. Agustina Blanco, Directora de la Red de Escuelas de Aprendizaje, Argentina; Patricia Vázquez del Mercado, Secretaria de Educación de Puebla; y Eduardo Backhoff, Consejero Presidente del INEE. Moderador: Lorenzo Gómez- Morin FLACSO.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(15)">
+							Trayecto recorrido y prospectiva de la Reforma Educativa <span>Conferencia magistral por Otto Granados Roldán, Subsecretario de Planeación, Evaluación y Coordinación, SEP México.</span>
+							</button>
+							<button type="button" class="ponenciaPlaylistButon" onclick="ponenciaVid(16)">
+							video de clausura
+							</button>
+            			</div>
+            		</div>
+            	</div>
             </section>
             <section id="agendaSection" class="">
                 <div id="agendaTable">
@@ -111,7 +185,7 @@
                                     <P>Reforma curricular</P>
                                     <ul>
                                         <li>Conferencia magistral impartida por Carlos Magro Mazo, Vicepresidente de la Asociaci&oacute;n Educaci&oacute;n Abierta y Director Acad&eacute;mico del Instituto Europeo de Dise&ntilde;o (IED).</li>
-                                        <li>Mesa de di&aacute;logo: voz, visi&oacute;n y retos de implementaci&oacute;n, con las participaciones de Celia D&iacute;az Arg&ntilde;ero (Espa&ntilde;ol), Silvia Conde Flores (FCE), Teresa Rojano Ceballos (Matem&aacute;ticas), Fernando Flores Camacho (Ciencias naturales y tecnolog&iacute;a), Laura Lima Mu&ntilde;iz (Historia), Mar&iacute;a del Carmen Campillo (Educaci&oacute;n socioemocional) y Juan Manuel Mart&iacute;nez Garc&iacute;a (Autonom&iacute;a curricular).
+                                        <li>Mesa de di&aacute;logo: voz, visi&oacute;n y retos de implementaci&oacute;n, con las participaciones de Celia D&iacute;az Arg&uuml;ero (Espa&ntilde;ol), Silvia Conde Flores (FCE), Teresa Rojano Ceballos (Matem&aacute;ticas), Fernando Flores Camacho (Ciencias naturales y tecnolog&iacute;a), Laura Lima Mu&ntilde;iz (Historia), Mar&iacute;a del Carmen Campillo (Educaci&oacute;n socioemocional) y Juan Manuel Mart&iacute;nez Garc&iacute;a (Autonom&iacute;a curricular).
                                             <ul>
                                                 <li><span class="greenFont">Moderadora:</span> Elisa Bonilla Rius, Directora General de Desarrollo Curricular de la SEB – SEP.</li>
                                             </ul>
@@ -263,7 +337,7 @@
                             <div class="ponente">
                                 <div> <img class="railPonetePic"> </div>
                                 <div>
-                                    <h3>Celia D&iacute;az Arg&ntilde;ero</h3>
+                                    <h3>Celia D&iacute;az Arg&uuml;ero</h3>
                                     <p><span>Autora de los Programas de estudio para la asignatura de Lengua materna Espa&ntilde;ol, de primaria y secundaria (Modelo Educativo 2017).</span></p>
                                 </div>
                             </div>
@@ -327,7 +401,7 @@
                     </div>
                 </div>
             </section>
-            <section id="sede" class="">
+            <!--<section id="sede" class="">
                 <div class="slideWrapper">
                     <div id="agendaSede" class="" style=""> 
                         <img id="sedeHeaderIMG" style="" src="resources/img/sedeHeader.png"> 
@@ -351,7 +425,7 @@
                         
                     </div>
                 </div>
-            </section>
+            </section>-->
             <section id="organizadores" class="blackBg">
                 <div class="slideWrapper" style="height: auto;">
                     <table>
@@ -403,7 +477,7 @@
                     <div class="col20"> <img> </div>
                     <div class="col80">
                         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-                        <div id="player"></div>
+                        <div id="speakerPlayer"></div>
                         <div id="" class="ponenteBiografia">
                             <h3>Aurelio Nu&ntilde;o</h3>
                             <p><span>Secretario de Educaci&oacute;n P&uacute;blica (12 de diciembre de 1977)</span></p>
@@ -546,7 +620,7 @@
                             <p>Desde 2008 a 2012 fue Director de Comunicaci&oacute;n y Marketing de EOI Escuela de Organizaci&oacute;n Industrial.</p>
                         </div>
                         <div id="" class="ponenteBiografia">
-                            <h3>Celia D&iacute;az Arg&ntilde;ero</h3>
+                            <h3>Celia D&iacute;az Arg&uuml;ero</h3>
                             <p><span>Autora de los Programas de estudio para la asignatura de Lengua materna espa&ntilde;ol, de primaria y secundaria (Modelo Educativo 2017).</span></p>
                             <p>Investigadora Titular en el Centro de Ling&ntilde;&iacute;stica Hisp&aacute;nica del Instituto de Investigaciones Filol&oacute;gicas de la UNAM. Licenciada en psicolog&iacute;a educativa en la Universidad Aut&oacute;noma Metropolitana Unidad Xochimilco. Obtuvo una Maestr&iacute;a y un Doctorado en Ciencias con especialidad en Investigaci&oacute;n Educativa en el Departamento de Investigaciones Educativas (DIE) del Centro de Investigaci&oacute;n y Estudios Avanzados (CINVESTAV) del Instituto Polit&eacute;cnico Nacional. Es especialista en adquisici&oacute;n de la lengua escrita. Ha desempe&ntilde;ado labores docentes en distintos niveles educativos. Fue Directora del &Aacute;rea de Lengua y Comunicaci&oacute;n de la Subsecretar&iacute;a de Educaci&oacute;n B&aacute;sica. Es autora de diversos materiales did&aacute;cticos y programas educativos que han sido publicados por la Secretar&iacute;a de Educaci&oacute;n P&uacute;blica.</p>
                             <p>Fue Directora Asociada de Lectura y Vida. Revista Latinoamericana de lectura que publica la Internacional Reading Association. Actualmente, es coordinadora del Programa de Maestr&iacute;a y Doctorado en Ling&ntilde;&iacute;stica de la UNAM.</p>
@@ -625,19 +699,35 @@
         var player;
 
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
+			ponencias = new YT.Player('ponencias', {
+                height: "100%", 
+				width: "100%",
+				playerVars: {
+					listType:'playlist',
+					list:'PL-ad44RjI1b7ELkaZy6cIaYrQMPcteZsl',
+					index:0,
+					startSeconds:0,
+					suggestedQuality:'large'
+				}
+            });
+			
+            speakerPlayer = new YT.Player('speakerPlayer', {
                 height: '350'
                 , width: '600'
-                , videoId: 'nHslEdP6y8s',
+                , videoId: 'nHslEdP6y8s'
             });
         }
         // 4. The API will call this function when the video player is ready.
         /*function onPlayerReady(event) {
             event.target.playVideo();
         }*/
-        function stopYTVideo() {
-            player.stopVideo();
-        }
+		
+		
+		
+        /*function stopYTVideo() {
+            speakerPlayer.stopVideo();
+        }*/
+		
     </script>
     <script type="text/javascript" src="resources/js/main.js"></script>
     <script type="text/javascript" src="resources/js/modalWindow.js"></script>
