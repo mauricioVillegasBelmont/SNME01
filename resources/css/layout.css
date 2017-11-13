@@ -38,10 +38,11 @@
         font-size: 100%;
     }
     .active #header>div>div .navButton{
+        display: block;
         width: calc(100% / 7);
         min-width: 140px;
         display: block;
-        padding: 1% 2%;
+        padding: 1% 0;
     }
     .active #header>div>div:last-child{
         width: 70%;
@@ -49,9 +50,6 @@
     .active #header #headerLogo{
         height: 120px;
         max-height: 80%;
-    }
-    .active #header>div>div .navButton{
-        display: block;
     }
     .slideWrapper{
         min-width: 900px;
@@ -204,7 +202,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         display: block;
-        padding: 1% 2%;
+        padding: 1% 0;
     }
     #portadaImg{
         width: 90%;
@@ -407,13 +405,6 @@
     #agendaSede{
         height: auto;
     }
-    /*.active #header div.menu_btns:hover div.navButton{
-        position: relative;
-        top: 55px;
-        display: block;
-        cursor: pointer;
-        pointer-events:all;
-    }*/
     .active #header>div>div{
         float: left;
     }
