@@ -251,6 +251,7 @@ h6 span {
 
 .capitalLeter {
 	width: 20%;
+	height: 250px;
 }
 
 .bodyText {
@@ -259,9 +260,10 @@ h6 span {
 }
 
 .bullet {
-	width: 75%;
+	width: 60%;
 	height: auto;
 	min-height: 15%;
+	margin: 25px 0;
 }
 
 .active #header>div>div .navButton:first-child {

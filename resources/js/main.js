@@ -15,23 +15,7 @@ var organizadoresAnimate = document.querySelectorAll('#organizadores img.animate
 
 function setAgendaPictures(){
     var windowWidth = window.innerWidth;
-    //var sedeHeaderIMG = document.getElementById('sedeHeaderIMG');
-    var agedaPic = document.getElementsByClassName('agedaPic');
-    var responsivePictures = ['responsive_agenda-25M.svg','responsive_agenda-26M.svg','responsive_agenda-26V.svg'];
-    var nonResponsivePictures = ['agenda-25M.svg','agenda-26M.svg','agenda-26V.svg'];
-    if(windowWidth <= 1024){
-        for(var i = 0;i <= agedaPic.length-1; i++){
-            agedaPic[i].src = 'resources/img/'+responsivePictures[i];
-            //console.log('agedaPic: res' + agedaPic[i]);
-        }
-        //sedeHeaderIMG.src = 'resources/img/responsive_sedeHeader.png';
-    }else{
-        for(var i = 0;i <= agedaPic.length-1; i++){
-            agedaPic[i].src = 'resources/img/'+nonResponsivePictures[i];
-            //console.log('agedaPic nonR: ' + agedaPic[i]);
-        }
-        //sedeHeaderIMG.src = 'resources/img/sedeHeader.png';
-    }
+	
 }
 
 function doSetTimeoutOrganizadores(index){
